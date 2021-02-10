@@ -8,6 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?= base_url('assets'); ?>/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= base_url('assets'); ?>/table/datatables.min.css">
 
     <title>Data Pegawai</title>
 </head>
@@ -16,26 +17,26 @@
     <!-- As a heading -->
     <nav class="navbar navbar-dark bg-success">
         <div class="container">
-            <span class="navbar-brand mb-0 h1">Sorong</span>
+            <span class="navbar-brand mb-0 h1">Pengadilan Agama Sorong</span>
         </div>
     </nav>
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row mt-4">
-            <div class="col-md-6">
-                <h3>Data Pegawai</h3>
-                 <a href="<?= base_url('pegawai/tambah/'); ?>" class="btn btn-primary mb-2">Tambah</a>
-                <div class="table">
-                    <table class="table-success">
+            <div class="card-body">
+                <h3 class="m-0 font-weight-bold text-success d-flex justify-content-around">Data Pegawai Pengadilan Agama Sorong</h3>
+                <div class="table-responsive">
+                    <table class="table-success table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <?php $no = 1; ?>
                             <tr>
                                 <th scope="col">No</th>
                                 <th scope="col">NIP</th>
-                                <th scope="col">Nama</th>
-                                <th scope="col">Gol</th>
-                                <th scope="col">Unit Kerja</th>
+                                <th scope="col"><center>Nama</center></th>
+                                <th scope="col">Golongan</th>
+                                <th scope="col">Jabatan</th>
                                 <th scope="col">Aksi</th>
+                                <th scope="col"><a href="<?= base_url('pegawai/tambah/'); ?>" class="btn btn-primary mb-2">Tambah</a></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -59,6 +60,10 @@
 
     <!-- Optional JavaScript -->
     <script src="<?= base_url('assets') ?>/js/bootstrap.min.js"></script>
+    <script src="<?= base_url('assets') ?>/table/datatables.min.js"></script>
+    <script> $(document).ready( function () {
+    $('#myTable').DataTable();
+    } );</script>
 </body>
 
 </html>

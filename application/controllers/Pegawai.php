@@ -11,6 +11,7 @@ class Pegawai extends CI_Controller
 
     public function index()
     {
+        $data['user'] = $this->detail_data();
         $data['pegawai'] = $this->Pegawai_model->viewPegawai();
         $this->load->view('pegawai', $data);
     }
@@ -39,6 +40,16 @@ class Pegawai extends CI_Controller
         redirect('pegawai');
       }
 
+      private function detail_data()
+      {
+          $id_user =$this->session->id_user;
+
+          $data['pegawaix'] = $this->pegawai->find($id_user);
+
+
+          return $data;
+      }
+
       public function ubah($id)
       {
         $validation = $this->form_validation; //untuk menghemat penulisan kode
@@ -57,4 +68,5 @@ class Pegawai extends CI_Controller
             redirect('pegawai');
         }
       }
+
     }

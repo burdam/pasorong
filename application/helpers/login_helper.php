@@ -5,7 +5,7 @@ defined('BASEPATH') OR die('No direct script access allowed!');
     {
       $CI =& get_instance();
     if (!@$CI->session->is_login && !$is_true) {
-        redirect('login/');
+        redirect('login');
     } elseif ($CI->session->is_login && $is_true) {
         redirect('pegawai');
     }

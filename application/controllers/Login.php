@@ -29,7 +29,7 @@ class Login extends CI_Controller {
 	{
 		$this->load->view('login');
 		//$data['page_title'] = 'Your title';
-		$this->load->view('dashboard');
+		//$this->load->view('dashboard');
 		//$this->load->view('menu');
 		//$this->load->view('content', $data);
 		//$this->load->view('footer');

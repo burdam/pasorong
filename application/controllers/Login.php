@@ -1,49 +1,50 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Login extends CI_Controller {
+class Login extends CI_Controller
+{
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
+    /**
+     * Index Page for this controller.
+     *
+     * Maps to the following URL
+     * 		http://example.com/index.php/welcome
+     *	- or -
+     * 		http://example.com/index.php/welcome/index
+     *	- or -
+     * Since this controller is set as the default controller in
+     * config/routes.php, it's displayed at http://example.com/
+     *
+     * So any other public methods not prefixed with an underscore will
+     * map to /index.php/welcome/<method_name>
+     * @see https://codeigniter.com/user_guide/general/urls.html
+     */
 
-   public function __construct()
-   {
-       parent::__construct();
-       $this->load->model('Pegawai_model');
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->model('Pegawai_model');
         //is_login(true);
-   }
-	public function index()
-	{
-		$this->load->view('login');
-		//$data['page_title'] = 'Your title';
-		//$this->load->view('dashboard');
-		//$this->load->view('menu');
-		//$this->load->view('content', $data);
-		//$this->load->view('footer');
-	}
+    }
+    public function index()
+    {
+        $this->load->view('login');
+        //$data['page_title'] = 'Your title';
+        //$this->load->view('dashboard');
+        //$this->load->view('menu');
+        //$this->load->view('content', $data);
+        //$this->load->view('footer');
+    }
 
-  public function login()
-	{
-    $this->load->model('Pegawai_model');
-		$this->load->view('login');
-    $this->load->model('Pegawai_model', 'pegawai');
+    public function login()
+    {
+        $this->load->model('Pegawai_model');
+        $this->load->view('login');
+        $this->load->model('Pegawai_model', 'pegawai');
         $username = $this->input->post('username');
         $password = $this->input->post('password');
 
-    $check = $this->pegawai->find_by('username', $username, false);
+        $check = $this->pegawai->find_by('username', $username, false);
         if ($check->num_rows() == 1) {
             $user_data = $check->row();
             $verify_password = password_verify($password, $user_data->password);
@@ -52,16 +53,16 @@ class Login extends CI_Controller {
                 $this->set_session($user_data);
                 redirect('pegawai');
             } else {
-              $this->error('Login gagal! <br>Password tidak sesuai');
+                $this->error('Login gagal! <br>Password tidak sesuai');
             }
         } else {
             $this->error('Login gagal! <br>User tidak ditemukan');
         }
 
         redirect('login/');
-	}
+    }
 
-  private function error($msg)
+    private function error($msg)
     {
         $this->session->set_flashdata('error', $msg);
     }
@@ -70,12 +71,15 @@ class Login extends CI_Controller {
     {
 
         $this->session->set_userdata([
-           'id_user' => $user_data->id_user,
-           'nama' => $user_data->nama,
-           'username' => $user_data->username,
-           'divisi' => $user_data->divisi,
-           'level' => $user_data->level,
-           'is_login' => true
+            'id_user' => $user_data->id_user,
+            'nama' => $user_data->nama,
+            'nip' => $user_data->nip,
+            'jabatan' => $user_data->jabatan,
+            'gol' => $user_data->gol,
+            'username' => $user_data->username,
+            'divisi' => $user_data->divisi,
+            'level' => $user_data->level,
+            'is_login' => true
         ]);
 
 
@@ -88,12 +92,11 @@ class Login extends CI_Controller {
 
     private function detail_data()
     {
-        $id_user =$this->session->id_user;
+        $id_user = $this->session->id_user;
 
         $data['pegawaix'] = $this->pegawai->find($id_user);
 
 
         return $data;
     }
-
 }

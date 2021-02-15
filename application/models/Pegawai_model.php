@@ -22,9 +22,9 @@ class Pegawai_model extends CI_Model
         $this->db->insert($this->_table, $data);
     }
 
-    public function hapus($id)
+    public function hapus($id_user)
     {
-        $this->db->where('id_user', $id);
+        $this->db->where('id_user', $id_user);
         $this->db->delete($this->_table);
     }
 

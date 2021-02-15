@@ -35,9 +35,12 @@ class Pegawai extends CI_Controller
         }
       }
 
-      public function hapus($id)
+      public function hapus()
       {
-        $this->Pegawai_model->hapus($id);
+        $model = new Pegawai_model();
+        $id_user = $this->request->getPost('id_user');
+        $model->hapus($id_user);
+        //$this->Pegawai_model->hapus($id);
         redirect('pegawai');
       }
 

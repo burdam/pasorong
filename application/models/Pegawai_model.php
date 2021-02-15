@@ -11,20 +11,20 @@ class Pegawai_model extends CI_Model
 
     public function tambahPegawai()
     {
-       $data = array(
-           'nip' => $this->input->post('nip', true),
-           'nama' => $this->input->post('nama', true),
-           'gol' => $this->input->post('gol', true),
-           'divisi' => $this->input->post('divisi', true)
-       );
+        $data = array(
+            'nip' => $this->input->post('nip', true),
+            'nama' => $this->input->post('nama', true),
+            'gol' => $this->input->post('gol', true),
+            'divisi' => $this->input->post('divisi', true)
+        );
 
-       //masukan data yang berhasil di input tiap-tiap field
-       $this->db->insert($this->_table, $data);
+        //masukan data yang berhasil di input tiap-tiap field
+        $this->db->insert($this->_table, $data);
     }
 
     public function hapus($id)
     {
-        $this->db->where('id', $id);
+        $this->db->where('id_user', $id);
         $this->db->delete($this->_table);
     }
 
@@ -45,7 +45,6 @@ class Pegawai_model extends CI_Model
         //cari id berdasarkan id yang ada dalam inputan
         $this->db->where('id_user', $this->input->post('id_user'));
         $this->db->update($this->_table, $data);
-
     }
 
     public function find_by($field, $value, $return = FALSE)

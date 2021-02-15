@@ -29,3 +29,36 @@
         table.page.len(-1).draw();
     });
 </script>
+<script>
+    $(document).ready(function(){
+ 
+        // get Edit Product
+        $('.btn-edit').on('click',function(){
+            // get data from button edit
+            const id_user = $(this).data('id_user');
+            const nama = $(this).data('nama');
+            const nip = $(this).data('nip');
+            const gol = $(this).data('gol');
+            const divisi = $(this).data('divisi');
+            // Set data to Form Edit
+            $('.id_user').val(id_user);
+            $('.nama').val(nama);
+            $('.nip').val(nip);
+            $('.gol').val(gol);
+            $('.divisi').val(divisi).trigger('change');
+            // Call Modal Edit
+            $('#editModal').modal('show');
+        });
+ 
+        // get Delete Product
+        $('.btn-delete').on('click',function(){
+            // get data from button edit
+            const id_user = $(this).data('id_user');
+            // Set data to Form Edit
+            $('.id_user').val(id_user);
+            // Call Modal Edit
+            $('#deleteModal').modal('show');
+        });
+         
+    });
+</script>

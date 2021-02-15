@@ -81,19 +81,12 @@
           </div>
         </div>
       </div>
-
-
       <?php $this->load->view("/admin/_partials/footer.php") ?>
       <!-- /.container-fluid -->
-
     </div>
     <!-- End of Main Content -->
-
-
-
   </div>
   <!-- End of Content Wrapper -->
-
   </div>
   <!-- End of Page Wrapper -->
 

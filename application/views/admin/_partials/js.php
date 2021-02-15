@@ -18,6 +18,14 @@
 <script src="<?= base_url('assets'); ?>/js/demo/chart-pie-demo.js"></script>
 <script src="<?= base_url('assets'); ?>/js/demo/datatables-demo.js"></script>
 <script src="<?= base_url('assets'); ?>/table/datatables.min.js"></script>
-<script> $(document).ready( function () {
-$('dataTable').dataTable();
-} );</script>
+<script>
+    $(document).ready(function() {
+        $('dataTable').DataTable();
+    });
+</script>
+<script>
+    var table = $('#example').DataTable();
+    $('#all').on('click', function() {
+        table.page.len(-1).draw();
+    });
+</script>

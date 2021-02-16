@@ -50,10 +50,7 @@
                                                     <center>Golongan</center>
                                                 </th>
                                                 <th>
-
-
                                                     <center><button type="button" class="btn btn-primary btn-circle btn-sm" data-toggle="modal" data-target="#addModal"><i class="fas fa-plus"></i></button></center>
-
                                                     <!-- Modal Add Product-->
                                                     <form action="<?= base_url('pegawai/tambah/'); ?>" method="post">
                                                         <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -102,11 +99,7 @@
                                                         </div>
                                                     </form>
                                                     <!-- End Modal Add Product-->
-
-
-
                                                 </th>
-
                                             </tr>
                                         </thead>
                                         <tfoot>
@@ -129,7 +122,6 @@
                                                 <th>
                                                     <center><button type="button" class="btn btn-primary btn-circle btn-sm" data-toggle="modal" data-target="#addModal"><i class="fas fa-plus"></i></button></center>
                                                 </th>
-
                                             </tr>
                                         </tfoot>
                                         <tbody>
@@ -275,18 +267,13 @@
                     </div>
                 </div>
                 <!-- /.container-fluid -->
-
             </div>
             <!-- End of Main Content -->
-
             <?php $this->load->view("/admin/_partials/footer.php") ?>
-
         </div>
         <!-- End of Content Wrapper -->
-
     </div>
     <!-- End of Page Wrapper -->
-
     <?php $this->load->view("/admin/_partials/scrolltop.php") ?>
     <?php $this->load->view("/admin/_partials/modal.php") ?>
     <?php $this->load->view("/admin/_partials/js.php") ?>

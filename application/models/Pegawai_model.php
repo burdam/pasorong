@@ -33,17 +33,19 @@ class Pegawai_model extends CI_Model
         return $this->db->get_where($this->_table, ['id_user' => $id])->row_array();
     }
 
-    public function ubahPegawai()
+    public function ubahPegawai($id)
     {
+
         $data = array(
             'nip' => $this->input->post('nip'),
             'nama' => $this->input->post('nama'),
             'gol' => $this->input->post('gol'),
             'divisi' => $this->input->post('divisi')
         );
+        console_log($data);
 
         //cari id berdasarkan id yang ada dalam inputan
-        $this->db->where('id_user', $this->input->post('id_user'));
+        $this->db->where('id_user', $id);
         $this->db->update($this->_table, $data);
     }
 

@@ -50,16 +50,59 @@
                                                     <center>Golongan</center>
                                                 </th>
                                                 <th>
-                                                    <center>
 
-                                                        <button type="button" class="btn btn-success mb-2" data-toggle="modal" data-target="#addModal">Add New</button>
 
-                                                        <a href="<?= base_url('pegawai/tambah/'); ?>" class="btn btn-primary btn-circle btn-sm" data-toggle="model" data-target="#addModal">
+                                                    <center><button type="button" class="btn btn-primary btn-circle btn-sm" data-toggle="modal" data-target="#addModal"><i class="fas fa-plus"></i></button></center>
 
-                                                            <i class="fas fa-plus"></i>
+                                                    <!-- Modal Add Product-->
+                                                    <form action="<?= base_url('pegawai/tambah/'); ?>" method="post">
+                                                        <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                            <div class="modal-dialog" role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h5 class="modal-title" id="exampleModalLabel">Tambah Pegawai</h5>
+                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                            <span aria-hidden="true">&times;</span>
+                                                                        </button>
+                                                                    </div>
+                                                                    <div class="modal-body">
 
-                                                        </a>
-                                                    </center>
+                                                                        <div class="form-group">
+                                                                            <label for="nip">NIP</label>
+                                                                            <input type="nip" class="form-control" id="nip" name="nip">
+                                                                            <?= form_error('nip', '<small class="pl-3 text-danger">', '</small>'); ?>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <label for="nama">Nama</label>
+                                                                            <input type="text" class="form-control" id="nama" name="nama">
+                                                                            <?= form_error('nisn', '<small class="pl-3 text-danger">', '</small>'); ?>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <label for="gol">Gol</label>
+                                                                            <input type="text" class="form-control" id="gol" name="gol">
+                                                                            <?= form_error('gol', '<small class="pl-3 text-danger">', '</small>'); ?>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <label for="divisi">Unit Kerja</label>
+                                                                            <input type="text" class="form-control" id="divisi" name="divisi">
+                                                                            <?= form_error('divisi', '<small class="pl-3 text-danger">', '</small>'); ?>
+                                                                        </div>
+                                                                        <!-- <button type="submit" class="btn btn-primary float-right" name="tambah">Tambah</button>
+                                                                            <a href="<?= base_url('pegawai'); ?>" class="btn btn-danger mb-2">Kembali</a> -->
+
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
+                                                                        <!-- <a href="<?= base_url('pegawai'); ?>" class="btn btn-primary">Simpan</a> -->
+                                                                        <button type="submit" class="btn btn-primary">Simpan</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                    <!-- End Modal Add Product-->
+
+
                                                 </th>
 
                                             </tr>
@@ -82,11 +125,7 @@
                                                     <center>Golongan</center>
                                                 </th>
                                                 <th>
-                                                    <center><a href="<?= base_url('pegawai/tambah/'); ?>" class="btn btn-primary btn-circle btn-sm" data-toggle="model" data-target="#addModal">
-
-                                                            <i class="fas fa-plus"></i>
-
-                                                        </a></center>
+                                                    <center><button type="button" class="btn btn-primary btn-circle btn-sm" data-toggle="modal" data-target="#addModal"><i class="fas fa-plus"></i></button></center>
                                                 </th>
 
                                             </tr>
@@ -105,26 +144,88 @@
                                                     </td>
                                                     <td>
                                                         <center>
-                                                            <a href="#" class="btn btn-info btn-sm btn-edit" data-nama="<?= $m['nama']; ?>" data-nip="<?= $m['nip']; ?>" data-gol="<?= $m['gol']; ?>" data-divisi="<?= $m['divisi']; ?>">Edit</a>
+                                                            <!-- <a href="#" class="btn btn-info btn-sm btn-edit" data-nama="<?= $m['nama']; ?>" data-nip="<?= $m['nip']; ?>" data-gol="<?= $m['gol']; ?>" data-divisi="<?= $m['divisi']; ?>">Edit</a> -->
+                                                            <a href="#" class="btn btn-warning btn-circle btn-sm" data-toggle="modal" data-target="#editModal<?= $m['id_user']; ?>"><i class="fas fa-edit"></i></a>
 
-                                                            <a href="#" class="btn btn-danger btn-sm btn-delete" data-id_user="<?= $m['id_user']; ?>">Delete</a>
+                                                            <!-- Modal Edit Product-->
+                                                            <form action="<?= base_url('pegawai/ubah/' . $m['id_user']); ?>" method="post">
+                                                                <div class="modal fade" id="editModal<?= $m['id_user']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                    <div class="modal-dialog" role="document">
+                                                                        <div class="modal-content">
+                                                                            <div class="modal-header">
+                                                                                <h5 class="modal-title" id="exampleModalLabel">Ubah Data Pegawai</h5>
+                                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                    <span aria-hidden="true">&times;</span>
+                                                                                </button>
+                                                                            </div>
+                                                                            <div class="modal-body">
+
+                                                                                <!-- <input type="hidden" value="<?= $pegawai['id_user']; ?>" name="id_user"> -->
+                                                                                <div class="form-group">
+                                                                                    <label for="nip">NIP</label>
+                                                                                    <input type="nip" class="form-control" id="nip" name="nip" value="<?= $m['nip']; ?>">
+                                                                                    <?= form_error('nip', '<small class="pl-3 text-danger">', '</small>'); ?>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label for="nama">Nama</label>
+                                                                                    <input type="text" class="form-control" id="nama" name="nama" value="<?= $m['nama']; ?>">
+                                                                                    <?= form_error('nama', '<small class="pl-3 text-danger">', '</small>'); ?>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label for="gol">Gol</label>
+                                                                                    <input type="text" class="form-control" id="gol" name="gol" value="<?= $m['gol']; ?>">
+                                                                                    <?= form_error('gol', '<small class="pl-3 text-danger">', '</small>'); ?>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label for="divisi">Unit Kerja</label>
+                                                                                    <input type="text" class="form-control" id="divisi" name="divisi" value="<?= $m['divisi']; ?>">
+                                                                                    <?= form_error('divisi', '<small class="pl-3 text-danger">', '</small>'); ?>
+                                                                                </div>
+                                                                                <button type="submit" class="btn btn-success float-right" name="Ubah">Ubah</button>
+
+                                                                            </div>
+                                                                            <div class="modal-footer">
+                                                                                <!-- <input type="hidden" name="product_id" class="product_id"> -->
+                                                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                                                <button type="submit" class="btn btn-primary">Update</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                            <!-- End Modal Edit Product-->
 
 
+                                                            <a href="#" class="btn btn-danger btn-circle btn-sm" data-toggle="modal" data-target="#deleteModal<?= $m['id_user']; ?>"><i class="fas fa-trash"></i></a>
+                                                            <!-- Modal Delete Product-->
+                                                            <!-- <form action="/pasorong/pegawai/hapus/" method="post"> -->
+                                                            <div class="modal fade" id="deleteModal<?= $m['id_user']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                <div class="modal-dialog" role="document">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            <h5 class="modal-title" id="exampleModalLabel">Hapus Pegawai</h5>
+                                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                <span aria-hidden="true">&times;</span>
+                                                                            </button>
+                                                                        </div>
+                                                                        <div class="modal-body">
 
+                                                                            <h4>Are you sure want to delete this product?</h4>
 
-                                                            <a href="<?= base_url('pegawai/ubah/'); ?><?= $m['id_user']; ?>" class="btn btn-warning btn-circle btn-sm">
-                                                                <i class="fas fa-edit"></i>
-                                                            </a>
-
-
-
-                                                            <a href="<?= base_url('pegawai/hapus/'); ?><?= $m['id_user']; ?>" class="btn btn-danger btn-circle btn-sm" onclick="return confirm('Apakah Anda ingin menghapus data ini?');">
-                                                                <i class="fas fa-trash"></i>
-                                                            </a>
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <!-- <input type="hidden" name="id_user" class="id_user"> -->
+                                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                                                                            <a href="<?= base_url('pegawai/hapus/'); ?><?= $m['id_user']; ?>" class="btn btn-primary">Yes</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- </form> -->
+                                                            <!-- End Modal Delete Product-->
 
                                                         </center>
                                                     </td>
-
                                                 </tr>
                                             <?php endforeach; ?>
                                         </tbody>
@@ -143,120 +244,6 @@
 
         </div>
         <!-- End of Content Wrapper -->
-        <!-- Modal Add Product-->
-        <form action="/pegawai/tambah/" method="post">
-            <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Add New Product</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-
-                            <div class="form-group">
-                                <label>Product Name</label>
-                                <input type="text" class="form-control" name="product_name" placeholder="Product Name">
-                            </div>
-
-                            <div class="form-group">
-                                <label>Price</label>
-                                <input type="text" class="form-control" name="product_price" placeholder="Product Price">
-                            </div>
-
-                            <div class="form-group">
-                                <label>Category</label>
-                                <select name="product_category" class="form-control">
-                                    <option value="">-Select-</option>
-                                    <?php foreach ($category as $row) : ?>
-                                        <option value="<?= $row->category_id; ?>"><?= $row->category_name; ?></option>
-                                    <?php endforeach; ?>
-                                </select>
-                            </div>
-
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Save</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </form>
-        <!-- End Modal Add Product-->
-
-        <!-- Modal Edit Product-->
-        <form action="/product/update" method="post">
-            <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Edit Product</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-
-                            <div class="form-group">
-                                <label>Product Name</label>
-                                <input type="text" class="form-control product_name" name="product_name" placeholder="Product Name">
-                            </div>
-
-                            <div class="form-group">
-                                <label>Price</label>
-                                <input type="text" class="form-control product_price" name="product_price" placeholder="Product Price">
-                            </div>
-
-                            <div class="form-group">
-                                <label>Category</label>
-                                <select name="product_category" class="form-control product_category">
-                                    <option value="">-Select-</option>
-                                    <?php foreach ($category as $row) : ?>
-                                        <option value="<?= $row->category_id; ?>"><?= $row->category_name; ?></option>
-                                    <?php endforeach; ?>
-                                </select>
-                            </div>
-
-                        </div>
-                        <div class="modal-footer">
-                            <input type="hidden" name="product_id" class="product_id">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Update</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </form>
-        <!-- End Modal Edit Product-->
-        <!-- Modal Delete Product-->
-        <form action="/pasorong/pegawai/hapus/" method="post">
-            <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Hapus Pegawai</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-
-                            <h4>Are you sure want to delete this product?</h4>
-
-                        </div>
-                        <div class="modal-footer">
-                            <input type="hidden" name="id_user" class="id_user">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-                            <button type="submit" class="btn btn-primary">Yes</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </form>
-        <!-- End Modal Delete Product-->
 
     </div>
     <!-- End of Page Wrapper -->

@@ -21,7 +21,8 @@ class Pegawai extends CI_Controller
   {
     $validation = $this->form_validation; //untuk menghemat penulisan kode
 
-    $validation->set_rules('nip', 'NIP', 'required');
+    $test=    $validation->set_rules('nip', 'NIP', 'required');
+    console_log($test);
     $validation->set_rules('nama', 'Nama', 'required');
     $validation->set_rules('gol', 'Gol', 'required');
     $validation->set_rules('divisi', 'Unit Kerja', 'required');
@@ -35,9 +36,8 @@ class Pegawai extends CI_Controller
     }
   }
 
-  public function hapus()
+  public function hapus($id_user)
   {
-    $id_user = $this->input->get('id_user');
     $this->Pegawai_model->hapus($id_user);
     redirect('pegawai');
   }
@@ -57,16 +57,20 @@ class Pegawai extends CI_Controller
     $validation = $this->form_validation; //untuk menghemat penulisan kode
     $data['pegawai'] = $this->Pegawai_model->getById($id);
 
+    $test = $validation->set_rules('divisi', 'Divisi', 'required');
+    console_log($test);
+
+
     $validation->set_rules('nip', 'NIP', 'required');
     $validation->set_rules('nama', 'Nama', 'required');
     $validation->set_rules('gol', 'Gol', 'required');
-    $validation->set_rules('divisi', 'Divisi', 'required');
+    
 
     if ($validation->run() == FALSE) //jika form validation gagal tampilkan kembali form tambahnya
     {
       $this->load->view('ubah', $data);
     } else {
-      $this->Pegawai_model->ubahPegawai();
+      $this->Pegawai_model->ubahPegawai($id);
       redirect('pegawai');
     }
   }

@@ -51,7 +51,7 @@
                                                     </th>
 
                                                     <th>
-                                                        <center><a href="<?= base_url('surat'); ?>" class="btn btn-primary mb-2">Tambah</a></center>
+                                                        <center><a href="<?= base_url('surat'); ?>" class="btn btn-primary btn-circle btn-sm"><i class="fas fa-check" ></i></a></center>
                                                     </th>
                                                 </tr>
                                             </thead>

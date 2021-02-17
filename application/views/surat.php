@@ -49,11 +49,11 @@
                       </div>
                     </div>
                     <form action=" <?= base_url('surat/store'); ?> " method="post">
-                      <div class="form-group">
+                      <!-- <div class="form-group">
                         <label for="jam_berangkat">Jam Berangkat : </label>
                         <input type="datetime" class="form-control" id="jam_berangkat" name="jam_berangkat" disabled>
                         <?= form_error('jam_berangkat', '<small class="pl-3 text-danger">', '</small>'); ?>
-                      </div>
+                      </div> -->
                       <div class="form-group">
                         <label for="kegiatan">Untuk Keperluan : </label>
                         <textarea class="form-control" id="kegiatan" name="kegiatan"> </textarea>

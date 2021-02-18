@@ -29,7 +29,7 @@
                                         <div class="card-body">
 
                                             <div class="form-group row">
-                                                <div class="col-2"><label for="nip">NIP </label>
+                                                <div class="col-3"><label for="nip">NIP </label>
                                                 </div>
                                                 <div class="col-9"> : <?= $pegawai->nip ?>
                                                     <input type="hidden" name="nip" id="nip" value="<?= $pegawai->nip ?>" class="form-control" placeholder="NIP" required="reuqired" />
@@ -37,7 +37,7 @@
                                             </div>
 
                                             <div class="form-group row">
-                                                <div class="col-2"><label for="nama">Nama </label>
+                                                <div class="col-3"><label for="nama">Nama </label>
                                                 </div>
                                                 <div class="col-9"> : <?= $pegawai->nama ?>
                                                     <input type="hidden" name="nama" id="nama" value="<?= $pegawai->nama ?>" class="form-control" placeholder="Nama" required="reuqired" />
@@ -45,7 +45,7 @@
                                             </div>
 
                                             <div class="form-group row">
-                                                <div class="col-2"><label for="gol">Golongan </label>
+                                                <div class="col-3"><label for="gol">Golongan </label>
                                                 </div>
                                                 <div class="col-9"> : <?= $pegawai->gol ?>
                                                     <input type="hidden" name="gol" id="go;" value="<?= $pegawai->gol ?>" class="form-control" placeholder="Golongan" required="reuqired" />
@@ -53,7 +53,7 @@
                                             </div>
 
                                             <div class="form-group row">
-                                                <div class="col-2"><label for="divisi">Unit Kerja </label>
+                                                <div class="col-3"><label for="divisi">Unit Kerja </label>
                                                 </div>
                                                 <div class="col-9"> : <?= $pegawai->divisi ?>
                                                     <input type="hidden" name="divisi" id="divisi" value="<?= $pegawai->divisi ?>" class="form-control" placeholder="Unit Kerja" required="reuqired" />

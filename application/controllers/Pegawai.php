@@ -106,20 +106,20 @@ class Pegawai extends CI_Controller
     }
   }
 
-  public function profil()
-  {
-    $id = $this->uri->segment(3);
-    $data['pegawai'] = $this->Pegawai_model->getById($id);
-    return $this->load('profil', $data);
+  // public function profil()
+  // {
+  //   $id = $this->uri->segment(3);
+  //   $data['pegawai'] = $this->Pegawai_model->getById($id);
+  //   return $this->load('profil', $data);
 
 
 
-    if ($validation->run() == FALSE) //jika form validation gagal tampilkan kembali form tambahnya
-    {
-      $this->load->view('ubah', $data);
-    } else {
-      $this->Pegawai_model->ubahProfil($id);
-      redirect('pegawai');
-    }
-  }
+  //   if ($validation->run() == FALSE) //jika form validation gagal tampilkan kembali form tambahnya
+  //   {
+  //     $this->load->view('ubah', $data);
+  //   } else {
+  //     $this->Pegawai_model->ubahProfil($id);
+  //     redirect('pegawai');
+  //   }
+  // }
 }

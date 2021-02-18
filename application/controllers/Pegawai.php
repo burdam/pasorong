@@ -101,7 +101,7 @@ class Pegawai extends CI_Controller
     {
       $this->load->view('ubah', $data);
     } else {
-      $this->Pegawai_model->ubahPegawai($id);
+      $this->Pegawai_model->ubahProfil($id);
       redirect('pegawai');
     }
   }
@@ -125,7 +125,7 @@ class Pegawai extends CI_Controller
     {
       $this->load->view('ubah', $data);
     } else {
-      $this->Pegawai_model->ubahPegawai($id);
+      $this->Pegawai_model->ubahProfil($id);
       redirect('pegawai');
     }
   }

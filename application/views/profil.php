@@ -1,74 +1,113 @@
-<div class="row">
+<!DOCTYPE html>
+<html lang="en">
 
-    <div class="col-12 col-md-8">
-        <div class="card">
-            <form action="<?= base_url('user/edit_profil') ?>" method="post">
-                <div class="card-header">
-                    <h4 class="card-title">Edit Profil</h4>
-                </div>
-                <div class="card-body border-top py-0 my-3">
-                    <h4 class="text-muted my-3">Profil</h4>
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-6">
-                            <div class="form-group">
-                                <label for="nik">NIP : </label>
-<<<<<<< HEAD
-                                <!-- <input type="hidden" name="id_user" value="<?= $this->uri->segment(3) ?>"> -->
-=======
-                                
->>>>>>> db177e7be8ea7cb69231a3fc59c2d2c080c24c36
-                                <input type="text" name="nip" id="nip" value="<?= $pegawai->nip ?>" class="form-control" placeholder="Masukan NIP Karyawan" disabled required="reuqired" />
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6">
-                            <div class="form-group">
-                                <label for="nama">Nama Lengkap : </label>
-                                <input type="text" name="nama" id="nama" value="<?= $pegawai->nama ?>" class="form-control" placeholder="Masukana Nama Lengkap Karyawan" required="reuqired" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12 ">
-                            <div class="form-group">
-                                <label for="telp">Gol : </label>
-                                <input type="text" name="gol" id="gol" value="<?= $pegawai->gol ?>" class="form-control" placeholder="Masukan gol" required="reuqired" />
-                            </div>
-                        </div>
-                        <div class="col-xs-12 ">
-                            <div class="form-group">
-                                <label for="email">Divisi : </label>
-                                <input type="text" name="divisi" id="divisi" value="<?= $pegawai->divisi ?>" class="form-control" placeholder="Masukan divis" required="reuqired" />
-                            </div>
-                        </div>
+<head>
+    <?php $this->load->view("/admin/_partials/head.php") ?>
+</head>
 
-                    </div>
-                </div>
-                <div class="card-body border-top py-0 my-3">
-                    <h4 class="text-muted my-3">Akun</h4>
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-6">
-                            <div class="form-group">
-                                <label for="username">Username</label>
-                                <input type="text" name="username" id="username" value="<?= $pegawai->username ?>" class="form-control" placeholder="Masukan Username" required="reuqired" />
+<body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+        <?php $this->load->view("/admin/_partials/sidebar.php") ?>
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+            <!-- Main Content -->
+            <div id="content">
+                <?php $this->load->view("/admin/_partials/topbar.php") ?>
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    <!-- Page Heading -->
+                    <div class="container">
+                        <h3 class="font-weight-bold text-success">Sistem Informasi Izin Keluar Kantor</h3>
+                        <div class="row mt-8">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-header py-3">
+                                        <h6 class="m-0 font-weight-bold text-success">Edit Profil</h6>
+                                    </div>
+                                    <form class="form-group" action="<?= base_url('user/edit_profil') ?>" method="post">
+                                        <div class="card-body">
+
+                                            <div class="form-group row">
+                                                <div class="col-2"><label for="nip">NIP </label>
+                                                </div>
+                                                <div class="col-9"> : <?= $pegawai->nip ?>
+                                                    <input type="hidden" name="nip" id="nip" value="<?= $pegawai->nip ?>" class="form-control" placeholder="NIP" required="reuqired" />
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <div class="col-2"><label for="nama">Nama </label>
+                                                </div>
+                                                <div class="col-9"> : <?= $pegawai->nama ?>
+                                                    <input type="hidden" name="nama" id="nama" value="<?= $pegawai->nama ?>" class="form-control" placeholder="Nama" required="reuqired" />
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <div class="col-2"><label for="gol">Golongan </label>
+                                                </div>
+                                                <div class="col-9"> : <?= $pegawai->gol ?>
+                                                    <input type="hidden" name="gol" id="go;" value="<?= $pegawai->gol ?>" class="form-control" placeholder="Golongan" required="reuqired" />
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <div class="col-2"><label for="divisi">Unit Kerja </label>
+                                                </div>
+                                                <div class="col-9"> : <?= $pegawai->divisi ?>
+                                                    <input type="hidden" name="divisi" id="divisi" value="<?= $pegawai->divisi ?>" class="form-control" placeholder="Unit Kerja" required="reuqired" />
+                                                </div>
+                                            </div>
+                                            <input type="hidden" name="username" id="username" value="<?= $pegawai->username ?>" class="form-control" placeholder="Username" required="reuqired" />
+
+                                            <div class="dropdown-divider">
+
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-2">
+                                                    <label for="password">Password </label>
+                                                </div>
+                                                <div class="col-4">
+                                                    <input type="password" name="password" id="password" value="<?= $pegawai->password ?>" class="form-control" placeholder="Password" required="reuqired" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-primary btn-circle btn-sm float-right"><i class="fa fa-save"></i></button>
+                                            </div>
+
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <!-- <div id="alert">
+                                        <?php if (@$this->session->response) : ?>
+                                            <div class="alert alert-<?= $this->session->response['status'] == 'error' ? 'danger' : $this->session->response['status'] ?> alert-dismissable fade show" role="alert">
+                                                <button class="close" aria-dismissable="alert">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <p><?= $this->session->response['message'] ?></p>
+                                            </div>
+                                        <?php endif; ?>
+                                    </div> -->
+
                             </div>
                         </div>
-                        <div class="col-xs-12 col-sm-6">
-                            <div class="form-group">
-                                <label for="password">Password</label>
-                                <input type="password" name="password" id="password" class="form-control" placeholder="********" />
-                                <span class="text-danger">ISi untuk Mengganti Password</span>
-                            </div>
-                        </div>
                     </div>
                 </div>
-                <div class="card-footer">
-                    <div class="row w-100">
-                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                            <button type="submit" class="btn btn-primary btn-block">Simpan <i class="fa fa-save"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </form>
+
+
+                <!-- /.container-fluid -->
+            </div>
+            <!-- End of Main Content -->
+            <?php $this->load->view("/admin/_partials/footer.php") ?>
         </div>
+        <!-- End of Content Wrapper -->
     </div>
-</div>
+    <!-- End of Page Wrapper -->
+    <?php $this->load->view("/admin/_partials/scrolltop.php") ?>
+    <?php $this->load->view("/admin/_partials/modal.php") ?>
+    <?php $this->load->view("/admin/_partials/js.php") ?>
+</body>
+
+</html>

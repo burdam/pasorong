@@ -44,7 +44,6 @@
                       <div class="col-10"> : <?php echo $this->session->userdata('gol'); ?>
                       </div>
                     </div>
-<<<<<<< HEAD
                     <div class="row">
                       <div class="col-2"><label for="keperluan">Keperluan </label>
                       </div>
@@ -55,28 +54,15 @@
                       <div class="col-12">
                         <form action=" <?= base_url('surat/store'); ?> " method="post">
                           <!-- <div class="form-group">
-=======
-                    <form action=" <?= base_url('surat/store'); ?> " method="post">
-                      <!-- <div class="form-group">
->>>>>>> 8d82cea5f3689c2601b88c3c847cddbcc2b04fae
                         <label for="jam_berangkat">Jam Berangkat : </label>
                         <input type="datetime" class="form-control" id="jam_berangkat" name="jam_berangkat" disabled>
                         <?= form_error('jam_berangkat', '<small class="pl-3 text-danger">', '</small>'); ?>
                       </div> -->
-<<<<<<< HEAD
                           <div class="form-group">
                             <textarea class="form-control" id="kegiatan" name="kegiatan"> </textarea>
                             <?= form_error('kegiatan', '<small class="pl-3 text-danger">', '</small>'); ?>
                           </div>
                           <!--  <div class="form-group">
-=======
-                      <div class="form-group">
-                        <label for="kegiatan">Untuk Keperluan : </label>
-                        <textarea class="form-control" id="kegiatan" name="kegiatan"> </textarea>
-                        <?= form_error('kegiatan', '<small class="pl-3 text-danger">', '</small>'); ?>
-                      </div>
-                      <!--  <div class="form-group">
->>>>>>> 8d82cea5f3689c2601b88c3c847cddbcc2b04fae
                         <label for="gol">Jabatan</label>
                         <input type="text" class="form-control" id="Jabatan" name="Jabatan">
                         <?= form_error('gol', '<small class="pl-3 text-danger">', '</small>'); ?>

@@ -14,7 +14,7 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
-        <a class="nav-link" href="<?= base_url('/pegawai'); ?>">
+        <a class="nav-link" href="<?= base_url('/dashboard'); ?>">
             <i class="fas fa-fw fa-home"></i>
             <span>Home</span></a>
     </li>

@@ -12,7 +12,11 @@
                         <div class="col-xs-12 col-sm-6">
                             <div class="form-group">
                                 <label for="nik">NIP : </label>
+<<<<<<< HEAD
                                 <!-- <input type="hidden" name="id_user" value="<?= $this->uri->segment(3) ?>"> -->
+=======
+                                
+>>>>>>> db177e7be8ea7cb69231a3fc59c2d2c080c24c36
                                 <input type="text" name="nip" id="nip" value="<?= $pegawai->nip ?>" class="form-control" placeholder="Masukan NIP Karyawan" disabled required="reuqired" />
                             </div>
                         </div>

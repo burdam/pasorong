@@ -19,7 +19,6 @@
             <span class="navbar-brand mb-0 h1">Pengadilan Agama Sorong</span>
         </div>
     </nav>
-
     <div class="container">
         <div class="row mt-4">
             <div class="col-md-6">
@@ -58,7 +57,6 @@
             </div>
         </div>
     </div>
-
     <!-- Optional JavaScript -->
     <script src="<?= base_url('assets') ?>/js/bootstrap.min.js"></script>
 </body>

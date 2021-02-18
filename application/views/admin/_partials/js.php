@@ -30,10 +30,9 @@
     });
 </script>
 <script>
-    $(document).ready(function(){
- 
+    $(document).ready(function() {
         // get Edit Product
-        $('.btn-edit').on('click',function(){
+        $('.btn-edit').on('click', function() {
             // get data from button edit
             const id_user = $(this).data('id_user');
             const nama = $(this).data('nama');
@@ -49,9 +48,9 @@
             // Call Modal Edit
             $('#editModal').modal('show');
         });
- 
+
         // get Delete Product
-        $('.btn-delete').on('click',function(){
+        $('.btn-delete').on('click', function() {
             // get data from button edit
             const id_user = $(this).data('id_user');
             // Set data to Form Edit
@@ -59,6 +58,6 @@
             // Call Modal Edit
             $('#deleteModal').modal('show');
         });
-         
+
     });
 </script>

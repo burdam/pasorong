@@ -7,14 +7,10 @@
 </head>
 
 <body class="bg-gradient-success">
-
     <div class="container">
-
         <!-- Outer Row -->
         <div class="row justify-content-center">
-
             <div class="col-xl-10 col-lg-12 col-md-9">
-
                 <div class="card o-hidden border-0 shadow-lg my-5">
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
@@ -39,7 +35,6 @@
                                             </div>
                                         </div>
                                         <button type="submit" class="btn btn-success btn-user btn-block"> Masuk </button>
-
                                     </form>
                                     <!--<hr></hr>
                                     <div class="text-center">
@@ -56,7 +51,6 @@
             </div>
         </div>
     </div>
-
     <?php $this->load->view("/admin/_partials/scrolltop.php") ?>
     <?php $this->load->view("/admin/_partials/modal.php") ?>
     <?php $this->load->view("/admin/_partials/js.php") ?>

@@ -26,10 +26,66 @@
                                         <h6 class="m-0 font-weight-bold text-success">Riwayat Surat</h6>
                                     </div>
                                     <div class="card-body">
+<<<<<<< HEAD
                                         <div class="table-responsive">
                                             <table class="table table-bordered" id="DataTable" width="100%" cellspacing="0">
                                                 <thead>
                                                     <?php $no = 1; ?>
+=======
+
+
+                                        <table class="table table-bordered" id="DataTable" width="100%" cellspacing="0">
+                                            <thead>
+                                                <?php $no = 1; ?>
+                                                <tr>
+                                                    <th>
+                                                        <center>No</center>
+                                                    </th>
+
+                                                    <th>
+                                                        <center>Waktu Berangkat</center>
+                                                    </th>
+                                                    <th>
+                                                        <center>Waktu Kembali</center>
+                                                    </th>
+                                                    <th>
+                                                        <center>Keperluan Izin</center>
+                                                    </th>
+                                                    <th>
+                                                        <center>Pejabat</center>
+                                                    </th>
+
+                                                    <th>
+                                                        <center><a href="<?= base_url('surat'); ?>" class="btn btn-primary btn-circle btn-sm"><i class="fas fa-check" ></i></a></center>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tfoot>
+                                                <tr>
+                                                    <th>
+                                                        <center>No</center>
+                                                    </th>
+
+                                                    <th>
+                                                        <center>Waktu Berangkat</center>
+                                                    </th>
+                                                    <th>
+                                                        <center>Waktu Kembali</center>
+                                                    </th>
+                                                    <th>
+                                                        <center>Keperluan Izin</center>
+                                                    </th>
+                                                    <th>
+                                                        <center>Pejabat</center>
+                                                    </th>
+                                                    <th>
+
+                                                    </th>
+                                                </tr>
+                                            </tfoot>
+                                            <tbody>
+                                                <?php foreach ($surat as $m) : ?>
+>>>>>>> 8d82cea5f3689c2601b88c3c847cddbcc2b04fae
                                                     <tr>
                                                         <th>
                                                             <center>No</center>

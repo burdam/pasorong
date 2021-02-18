@@ -49,6 +49,23 @@ class Pegawai_model extends CI_Model
         $this->db->update($this->_table, $data);
     }
 
+    public function ubahProfil($id)
+    {
+
+        $data = array(
+            'nip' => $this->input->post('nip'),
+            'nama' => $this->input->post('nama'),
+            'gol' => $this->input->post('gol'),
+            'divisi' => $this->input->post('divisi'),
+            'password' => $this->input->post('password')
+        );
+        console_log($data);
+
+        //cari id berdasarkan id yang ada dalam inputan
+        $this->db->where('id_user', $id);
+        $this->db->update($this->_table, $data);
+    }
+
     public function find_by($field, $value, $return = FALSE)
     {
         $this->db->where($field, $value);

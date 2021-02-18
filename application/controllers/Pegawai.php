@@ -21,7 +21,7 @@ class Pegawai extends CI_Controller
   {
     $validation = $this->form_validation; //untuk menghemat penulisan kode
 
-    $test=    $validation->set_rules('nip', 'NIP', 'required');
+    $test =    $validation->set_rules('nip', 'NIP', 'required');
     console_log($test);
     $validation->set_rules('nama', 'Nama', 'required');
     $validation->set_rules('gol', 'Gol', 'required');
@@ -64,7 +64,7 @@ class Pegawai extends CI_Controller
     $validation->set_rules('nip', 'NIP', 'required');
     $validation->set_rules('nama', 'Nama', 'required');
     $validation->set_rules('gol', 'Gol', 'required');
-    
+
 
     if ($validation->run() == FALSE) //jika form validation gagal tampilkan kembali form tambahnya
     {
@@ -80,5 +80,53 @@ class Pegawai extends CI_Controller
     $this->session->sess_destroy();
     session_destroy();
     redirect('login');
+  }
+
+  public function update($id)
+  {
+    $validation = $this->form_validation; //untuk menghemat penulisan kode
+    $data['pegawai'] = $this->Pegawai_model->getById($id);
+
+    $test = $validation->set_rules('divisi', 'Divisi', 'required');
+    console_log($test);
+
+
+    $validation->set_rules('nip', 'NIP', 'required');
+    $validation->set_rules('nama', 'Nama', 'required');
+    $validation->set_rules('gol', 'Gol', 'required');
+    $validation->set_rules('password', 'Password', 'required');
+
+
+    if ($validation->run() == FALSE) //jika form validation gagal tampilkan kembali form tambahnya
+    {
+      $this->load->view('ubah', $data);
+    } else {
+      $this->Pegawai_model->ubahPegawai($id);
+      redirect('pegawai');
+    }
+  }
+
+  public function profil($id)
+  {
+    $validation = $this->form_validation; //untuk menghemat penulisan kode
+    $data['pegawai'] = $this->Pegawai_model->getById($id);
+
+    $test = $validation->set_rules('divisi', 'Divisi', 'required');
+    console_log($test);
+
+
+    $validation->set_rules('nip', 'NIP', 'required');
+    $validation->set_rules('nama', 'Nama', 'required');
+    $validation->set_rules('gol', 'Gol', 'required');
+    $validation->set_rules('password', 'Password', 'required');
+
+
+    if ($validation->run() == FALSE) //jika form validation gagal tampilkan kembali form tambahnya
+    {
+      $this->load->view('ubah', $data);
+    } else {
+      $this->Pegawai_model->ubahPegawai($id);
+      redirect('pegawai');
+    }
   }
 }

@@ -25,12 +25,6 @@ class Surat extends CI_Controller {
         $this->load->view('dasu', $data);
 	
 	}
-
-
-
-
-
-
 	
 	public function kembali($id)
 	{

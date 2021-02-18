@@ -113,7 +113,6 @@ class Pegawai extends CI_Controller
     return $this->load('profil', $data);
 
 
-<<<<<<< HEAD
 
     if ($validation->run() == FALSE) //jika form validation gagal tampilkan kembali form tambahnya
     {
@@ -122,7 +121,5 @@ class Pegawai extends CI_Controller
       $this->Pegawai_model->ubahProfil($id);
       redirect('pegawai');
     }
-=======
->>>>>>> origin/beru
   }
 }

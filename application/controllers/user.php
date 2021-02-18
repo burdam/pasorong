@@ -1,6 +1,6 @@
 <?php
 
-class user extends CI_Controller
+class User extends CI_Controller
 {
 
   public function __construct()
@@ -48,6 +48,7 @@ class user extends CI_Controller
 
       $this->session->set_flashdata('response', $response);
       redirect('user');
+      
   }
 
 

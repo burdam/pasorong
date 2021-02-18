@@ -12,8 +12,8 @@
                         <div class="col-xs-12 col-sm-6">
                             <div class="form-group">
                                 <label for="nik">NIP : </label>
-                                <input type="hidden" name="id_user" value="<?= $this->uri->segment(3) ?>">
-                                <input type="text" name="nik" id="nik" value="<?= $pegawai->nip ?>" class="form-control" placeholder="Masukan NIP Karyawan" disabled required="reuqired" />
+                                <!-- <input type="hidden" name="id_user" value="<?= $this->uri->segment(3) ?>"> -->
+                                <input type="text" name="nip" id="nip" value="<?= $pegawai->nip ?>" class="form-control" placeholder="Masukan NIP Karyawan" disabled required="reuqired" />
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-6">

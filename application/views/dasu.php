@@ -38,11 +38,11 @@
                                                             <center>Waktu Berangkat</center>
                                                         </th>
                                                         <th>
-                                                            <center>Waktu Kembali</center>
-                                                        </th>
-                                                        <th>
                                                             <center>Keperluan Izin</center>
                                                         </th>
+                                                        <th>
+                                                            <center>Waktu Kembali</center>
+                                                        </th>                                                        
                                                         <th>
                                                             <center>Pejabat</center>
                                                         </th>
@@ -60,11 +60,11 @@
                                                             <center>Waktu Berangkat</center>
                                                         </th>
                                                         <th>
-                                                            <center>Waktu Kembali</center>
-                                                        </th>
-                                                        <th>
                                                             <center>Keperluan Izin</center>
                                                         </th>
+                                                        <th>
+                                                            <center>Waktu Kembali</center>
+                                                        </th>                                                        
                                                         <th>
                                                             <center>Pejabat</center>
                                                         </th>
@@ -86,6 +86,9 @@
                                                                 </center>
                                                             </td>
                                                             <td>
+                                                                <?= $m['kegiatan']; ?>
+                                                            </td>
+                                                            <td>
                                                                 <center>
                                                                     <?php if ($m['jam_kembali'] == null) : ?>
                                                                         -
@@ -96,10 +99,7 @@
                                                                 </center>
                                                             </td>
                                                             <td>
-                                                                <center><?= $m['kegiatan']; ?></center>
-                                                            </td>
-                                                            <td>
-                                                                <center><?= $m['pejabat']; ?></center>
+                                                                <?= $m['pejabat']; ?>
                                                             </td>
                                                             <?php if ($m['jam_kembali'] == null) : ?>
                                                                 <td>

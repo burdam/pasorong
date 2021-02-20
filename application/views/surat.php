@@ -18,68 +18,63 @@
         <div class="container-fluid">
           <!-- Page Heading -->
           <div class="container">
-            <h3 class="font-weight-bold text-success">Sistem Informasi Izin Keluar Kantor</h3>
+            <h1 class="h5 font-weight-bold text-success">Sistem Informasi Izin Keluar Kantor</h1>
             <div class="row mt-8">
               <div class="col-md-12">
                 <div class="card">
                   <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-success">Surat Izin</h6>
+                    <h1 class="h6 m-0 font-weight-bold text-success">Surat Izin</h1>
                   </div>
+
                   <div class="card-body">
+
                     <div class="row">
-                      <div class="col-2"><label for="nama">Nama </label>
+                      <div class="col-3"><label for="nip">NIP </label>
                       </div>
-                      <div class="col-10"> : <?php echo $this->session->userdata('nama'); ?>
+                      <div class="col-9"> : <?php echo $this->session->userdata('nip'); ?>
                       </div>
                     </div>
+
                     <div class="row">
-                      <div class="col-2"><label for="nip">NIP </label>
+                      <div class="col-3"><label for="nama">Nama </label>
                       </div>
-                      <div class="col-10"> : <?php echo $this->session->userdata('nip'); ?>
+                      <div class="col-9"> : <?php echo $this->session->userdata('nama'); ?>
                       </div>
                     </div>
+
                     <div class="row">
-                      <div class="col-2"><label for="gol">Golongan </label>
+                      <div class="col-3"><label for="gol">Golongan </label>
                       </div>
-                      <div class="col-10"> : <?php echo $this->session->userdata('gol'); ?>
+                      <div class="col-9"> : <?php echo $this->session->userdata('gol'); ?>
                       </div>
                     </div>
+
                     <div class="row">
-                      <div class="col-2"><label for="keperluan">Keperluan </label>
+                      <div class="col-3"><label for="keperluan">Keperluan </label>
                       </div>
-                      <div class="col-10"> :
+                      <div class="col-9"> :
                       </div>
                     </div>
+
                     <div class="row">
                       <div class="col-12">
                         <form action=" <?= base_url('surat/store'); ?> " method="post">
-                          <!-- <div class="form-group">
-                        <label for="jam_berangkat">Jam Berangkat : </label>
-                        <input type="datetime" class="form-control" id="jam_berangkat" name="jam_berangkat" disabled>
-                        <?= form_error('jam_berangkat', '<small class="pl-3 text-danger">', '</small>'); ?>
-                      </div> -->
                           <div class="form-group">
                             <textarea class="form-control" id="kegiatan" name="kegiatan"> </textarea>
                             <?= form_error('kegiatan', '<small class="pl-3 text-danger">', '</small>'); ?>
                           </div>
-                          <!--  <div class="form-group">
-                        <label for="gol">Jabatan</label>
-                        <input type="text" class="form-control" id="Jabatan" name="Jabatan">
-                        <?= form_error('gol', '<small class="pl-3 text-danger">', '</small>'); ?>
-                      </div> -->
-                          <!-- <div class="form-group">
-                        <label for="divisi">Pejabat</label>
-                        <input type="text" class="form-control" id="pejabat" name="pejabat">
-                        <?= form_error('divisi', '<small class="pl-3 text-danger">', '</small>'); ?>
-                      </div> -->
-                          <div class="form-group">
-                            <button type="submit" name="tambah" class="btn btn-success btn-circle btn-sm float-right"><i class="fas fa-check"></i></button>
-                            <!-- <a href="<?= base_url('pegawai'); ?>" class="btn btn-danger ">Batal</a> -->
-                          </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-12">
+                        <button type="submit" name="tambah" class="btn btn-success btn-circle btn-sm float-right"><i class="fas fa-check"></i></button>
                         </form>
                       </div>
                     </div>
+
                   </div>
+
                 </div>
               </div>
             </div>

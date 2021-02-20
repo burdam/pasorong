@@ -20,10 +20,10 @@
                     <div class="container-fluid">
                         <div class="row mt-8">
                             <div class="col-md-12">
-                                <h3 class="font-weight-bold text-success">Sistem Informasi Izin Keluar Kantor</h3>
+                                <h1 class="h5 font-weight-bold text-success">Sistem Informasi Izin Keluar Kantor</h1>
                                 <div class="card shadow mb-4">
                                     <div class="card-header py-3">
-                                        <h6 class="m-0 font-weight-bold text-success">Data Pegawai</h6>
+                                        <h1 class="h6 m-0 font-weight-bold text-success">Data Pegawai</h1>
                                     </div>
                                     <div class="card-body">
                                         <div class="table-responsive">
@@ -48,6 +48,7 @@
                                                         </th>
                                                         <th>
                                                             <center><button type="button" class="btn btn-primary btn-circle btn-sm" data-toggle="modal" data-target="#addModal"><i class="fas fa-plus"></i></button></center>
+
                                                             <!-- Modal Add Product-->
                                                             <form action="<?= base_url('pegawai/tambah/'); ?>" method="post">
                                                                 <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -80,12 +81,8 @@
                                                                                     <input type="text" class="form-control" id="gol" name="gol">
                                                                                     <?= form_error('gol', '<small class="pl-3 text-danger">', '</small>'); ?>
                                                                                 </div>
-                                                                                <!-- <button type="submit" class="btn btn-primary float-right" name="tambah">Tambah</button>
-                                                                        <a href="<?= base_url('pegawai'); ?>" class="btn btn-danger mb-2">Kembali</a> -->
                                                                             </div>
                                                                             <div class="modal-footer">
-                                                                                <!-- <button type="button" class="btn btn-secondary btn-circle btn-sm" data-dismiss="modal"><i class="fas fa-arrow-left"></i></button> -->
-                                                                                <!-- <a href="<?= base_url('pegawai'); ?>" class="btn btn-primary">Simpan</a> -->
                                                                                 <button type="submit" class="btn btn-success btn-circle btn-sm"><i class="fas fa-check"></i></button>
                                                                             </div>
                                                                         </div>
@@ -93,6 +90,7 @@
                                                                 </div>
                                                             </form>
                                                             <!-- End Modal Add Product-->
+
                                                         </th>
                                                     </tr>
                                                 </thead>
@@ -132,10 +130,10 @@
                                                             </td>
                                                             <td>
                                                                 <center>
-                                                                    <!-- <a href="#" class="btn btn-info btn-sm btn-edit" data-nama="<?= $m['nama']; ?>" data-nip="<?= $m['nip']; ?>" data-gol="<?= $m['gol']; ?>" data-divisi="<?= $m['divisi']; ?>">Edit</a> -->
                                                                     <a href="#" class="btn btn-warning btn-circle btn-sm" data-toggle="modal" data-target="#editModal<?= $m['id_user']; ?>"><i class="fas fa-edit"></i></a>
                                                                     <a href="#" class="btn btn-danger btn-circle btn-sm" data-toggle="modal" data-target="#deleteModal<?= $m['id_user']; ?>"><i class="fas fa-trash"></i></a>
                                                                 </center>
+
                                                                 <!-- Modal Edit Product-->
                                                                 <form action="<?= base_url('pegawai/ubah/' . $m['id_user']); ?>" method="post">
                                                                     <div class="modal fade" id="editModal<?= $m['id_user']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -148,8 +146,6 @@
                                                                                     </button>
                                                                                 </div>
                                                                                 <div class="modal-body">
-
-                                                                                    <!-- <input type="hidden" value="<?= $pegawai['id_user']; ?>" name="id_user"> -->
                                                                                     <div class="form-group">
                                                                                         <label for="nip">NIP</label>
                                                                                         <input type="text" class="form-control" id="nip" name="nip" value="<?= $m['nip']; ?>">
@@ -170,11 +166,8 @@
                                                                                         <input type="text" class="form-control" id="divisi" name="divisi" value="<?= $m['divisi']; ?>">
                                                                                         <?= form_error('divisi', '<small class="pl-3 text-danger">', '</small>'); ?>
                                                                                     </div>
-                                                                                    <!-- <button type="submit" class="btn btn-success float-right" name="Ubah">Ubah</button> -->
                                                                                 </div>
                                                                                 <div class="modal-footer">
-                                                                                    <!-- <input type="hidden" name="product_id" class="product_id"> -->
-                                                                                    <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
                                                                                     <button type="submit" class="btn btn-success btn-circle btn-sm"><i class="fas fa-check"></i></button>
                                                                                 </div>
                                                                             </div>
@@ -182,8 +175,8 @@
                                                                     </div>
                                                                 </form>
                                                                 <!-- End Modal Edit Product-->
+
                                                                 <!-- Modal Delete Product-->
-                                                                <!-- <form action="/pasorong/pegawai/hapus/" method="post"> -->
                                                                 <div class="modal fade" id="deleteModal<?= $m['id_user']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                                     <div class="modal-dialog" role="document">
                                                                         <div class="modal-content">
@@ -195,7 +188,6 @@
                                                                             </div>
                                                                             <div class="modal-body">
                                                                                 <div class="modal-body">
-                                                                                    <!-- <input type="hidden" value="<?= $pegawai['id_user']; ?>" name="id_user"> -->
                                                                                     <div class="row">
                                                                                         <div class="col-4">
                                                                                             <label for="nip">NIP</label>
@@ -228,19 +220,16 @@
                                                                                             <label for="nip">: <?= $m['gol']; ?></label>
                                                                                         </div>
                                                                                     </div>
-                                                                                    <!-- <button type="submit" class="btn btn-success float-right" name="Ubah">Ubah</button> -->
                                                                                 </div>
                                                                             </div>
                                                                             <div class="modal-footer">
-                                                                                <!-- <input type="hidden" name="id_user" class="id_user"> -->
-                                                                                <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button> -->
                                                                                 <a href="<?= base_url('pegawai/hapus/'); ?><?= $m['id_user']; ?>" class="btn btn-success btn-circle btn-sm"><i class="fas fa-check"></i></a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <!-- </form> -->
                                                                 <!-- End Modal Delete Product-->
+
                                                             </td>
                                                         </tr>
                                                     <?php endforeach; ?>

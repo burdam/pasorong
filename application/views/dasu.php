@@ -56,12 +56,21 @@
                                                         </th>
                                                         <th>
                                                             <center>Keperluan Izin</center>
+<<<<<<< HEAD
                                                         </th>
                                                         <th>
                                                             <center>Waktu Kembali</center>
                                                         </th>
                                                         <th>
                                                             <center>Atasan</center>
+=======
+                                                        </th>
+                                                        <th>
+                                                            <center>Waktu Kembali</center>
+                                                        </th>                                                        
+                                                        <th>
+                                                            <center>Pejabat</center>
+>>>>>>> 5022e94fa89e51eecb82b92b637d0437a97cd972
                                                         </th>
                                                         <th>
                                                             <center><a href="<?= base_url('surat'); ?>" class="btn btn-primary btn-circle btn-sm"><i class="fas fa-plus"></i></a></center>
@@ -79,12 +88,21 @@
                                                         </th>
                                                         <th>
                                                             <center>Keperluan Izin</center>
+<<<<<<< HEAD
                                                         </th>
                                                         <th>
                                                             <center>Waktu Kembali</center>
                                                         </th>
                                                         <th>
                                                             <center>Atasan</center>
+=======
+                                                        </th>
+                                                        <th>
+                                                            <center>Waktu Kembali</center>
+                                                        </th>                                                        
+                                                        <th>
+                                                            <center>Pejabat</center>
+>>>>>>> 5022e94fa89e51eecb82b92b637d0437a97cd972
                                                         </th>
                                                         <th>
                                                             <center><a href="<?= base_url('surat'); ?>" class="btn btn-primary btn-circle btn-sm"><i class="fas fa-plus"></i></a></center>

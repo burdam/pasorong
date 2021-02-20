@@ -43,36 +43,36 @@
 
                                         <div class="table-responsive">
 
-                                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                            <table class="table table-sm table-bordered" id="dataTable" width="100%" cellspacing="0">
 
                                                 <thead>
                                                     <?php $no = 1; ?>
                                                     <tr>
-                                                        <th>
+                                                        <th width="1%">
                                                             <center>No</center>
                                                         </th>
-                                                        <th>
-                                                            <center>Waktu Berangkat</center>
+                                                        <th width="10%">
+                                                            <center>Tanggal</center>
+                                                        </th>
+                                                        <th width="1%">
+                                                            <center>NIP</center>
+                                                        </th>
+                                                        <th width="1%">
+                                                            <center>Nama</center>
+                                                        </th>
+                                                        <th width="1%">
+                                                            <center>Jam Keluar</center>
                                                         </th>
                                                         <th>
                                                             <center>Keperluan Izin</center>
-<<<<<<< HEAD
                                                         </th>
-                                                        <th>
-                                                            <center>Waktu Kembali</center>
+                                                        <th width="1%">
+                                                            <center>Jam Kembali</center>
                                                         </th>
-                                                        <th>
+                                                        <th width="1%">
                                                             <center>Atasan</center>
-=======
                                                         </th>
-                                                        <th>
-                                                            <center>Waktu Kembali</center>
-                                                        </th>                                                        
-                                                        <th>
-                                                            <center>Pejabat</center>
->>>>>>> 5022e94fa89e51eecb82b92b637d0437a97cd972
-                                                        </th>
-                                                        <th>
+                                                        <th width="1%">
                                                             <center><a href="<?= base_url('surat'); ?>" class="btn btn-primary btn-circle btn-sm"><i class="fas fa-plus"></i></a></center>
                                                         </th>
                                                     </tr>
@@ -84,25 +84,25 @@
                                                             <center>No</center>
                                                         </th>
                                                         <th>
-                                                            <center>Waktu Berangkat</center>
+                                                            <center>Tanggal</center>
+                                                        </th>
+                                                        <th>
+                                                            <center>NIP</center>
+                                                        </th>
+                                                        <th>
+                                                            <center>Nama</center>
+                                                        </th>
+                                                        <th>
+                                                            <center>Jam Keluar</center>
                                                         </th>
                                                         <th>
                                                             <center>Keperluan Izin</center>
-<<<<<<< HEAD
                                                         </th>
                                                         <th>
-                                                            <center>Waktu Kembali</center>
+                                                            <center>Jam Kembali</center>
                                                         </th>
                                                         <th>
                                                             <center>Atasan</center>
-=======
-                                                        </th>
-                                                        <th>
-                                                            <center>Waktu Kembali</center>
-                                                        </th>                                                        
-                                                        <th>
-                                                            <center>Pejabat</center>
->>>>>>> 5022e94fa89e51eecb82b92b637d0437a97cd972
                                                         </th>
                                                         <th>
                                                             <center><a href="<?= base_url('surat'); ?>" class="btn btn-primary btn-circle btn-sm"><i class="fas fa-plus"></i></a></center>
@@ -116,6 +116,18 @@
                                                             <th scope="row">
                                                                 <center><?= $no++; ?></center>
                                                             </th>
+                                                            <td>
+                                                                <center>
+                                                                    <?php $berangkat = date('D, d M Y', strtotime($m['jam_berangkat']));    ?>
+                                                                    <?= $berangkat; ?>
+                                                                </center>
+                                                            </td>
+                                                            <td>
+                                                                <?= $m['nip']; ?>
+                                                            </td>
+                                                            <td>
+                                                                <?= $m['nama']; ?>
+                                                            </td>
                                                             <td>
                                                                 <center>
                                                                     <?php $berangkat = date('H:i', strtotime($m['jam_berangkat']));    ?>

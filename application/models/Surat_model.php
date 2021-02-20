@@ -14,18 +14,19 @@ class Surat_model extends CI_Model
 
         $now = date('y-m-d H:i:s');
 
-       $data = array(
-          
-           'id_user' => $this->session->userdata('id_user'),
-           'jam_berangkat' => $now,
-           'jam_kembali' => $this->input->post('jam_kembali'),
-           'kegiatan' => $this->input->post('kegiatan'),
-           //'jabatan' => $this->session->userdata('jabatan'),
-           'pejabat' => $this->input->post('pejabat')
-       );
+        $data = array(
 
-       //masukan data yang berhasil di input tiap-tiap field
-       $this->db->insert($this->_table, $data);
+            'id_user' => $this->session->userdata('id_user'),
+            'nip' => $this->session->userdata('nip'),
+            'nama' => $this->session->userdata('nama'),
+            'jam_berangkat' => $now,
+            'jam_kembali' => $this->input->post('jam_kembali'),
+            'kegiatan' => $this->input->post('kegiatan'),
+            'pejabat' => $this->input->post('pejabat')
+        );
+
+        //masukan data yang berhasil di input tiap-tiap field
+        $this->db->insert($this->_table, $data);
     }
 
     public function hapus($id)
@@ -45,14 +46,13 @@ class Surat_model extends CI_Model
 
         $data = array(
 
-           'jam_kembali' =>  $now ,
-           
+            'jam_kembali' =>  $now,
+
         );
 
         //cari id berdasarkan id yang ada dalam inputan
         $this->db->where('id_surat', $id);
         $this->db->update($this->_table, $data);
-
     }
 
     public function find_by($field, $value, $return = FALSE)

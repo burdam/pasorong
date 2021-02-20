@@ -36,6 +36,8 @@ class Surat extends CI_Controller
 		$this->load->model('Surat_model', 'surat');
 		$validation = $this->form_validation; //untuk menghemat penulisan kode
 		$validation->set_rules('id_user', 'id_user', 'required');
+		$validation->set_rules('nip', 'nip', 'required');
+		$validation->set_rules('nama', 'nama', 'required');
 		$validation->set_rules('jam_berangkat', 'jam_berangkat', 'required');
 		$validation->set_rules('jam_kembali', 'jam_kembali', 'required');
 		$validation->set_rules('kegiatan', 'kegiatan', 'required');

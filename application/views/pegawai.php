@@ -21,13 +21,20 @@
                         <div class="row mt-8">
                             <div class="col-md-12">
                                 <h1 class="h5 font-weight-bold text-success">Sistem Informasi Izin Keluar Kantor</h1>
+
+                                <!-- DataTales Example -->
                                 <div class="card shadow mb-4">
+
                                     <div class="card-header py-3">
                                         <h1 class="h6 m-0 font-weight-bold text-success">Data Pegawai</h1>
                                     </div>
+
                                     <div class="card-body">
+
                                         <div class="table-responsive">
-                                            <table class="table table-bordered" id="DataTable" width="100%" cellspacing="0">
+
+                                            <table class="table table-sm table-bordered" id="dataTable" width="100%" cellspacing="0">
+
                                                 <thead>
                                                     <?php $no = 1; ?>
                                                     <tr>
@@ -94,6 +101,7 @@
                                                         </th>
                                                     </tr>
                                                 </thead>
+
                                                 <tfoot>
                                                     <tr>
                                                         <th>
@@ -116,6 +124,7 @@
                                                         </th>
                                                     </tr>
                                                 </tfoot>
+
                                                 <tbody>
                                                     <?php foreach ($pegawai as $m) : ?>
                                                         <tr>
@@ -234,10 +243,16 @@
                                                         </tr>
                                                     <?php endforeach; ?>
                                                 </tbody>
+
                                             </table>
+
                                         </div>
+
                                     </div>
+
                                 </div>
+
+
                             </div>
                         </div>
                     </div>

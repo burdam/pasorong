@@ -17,12 +17,14 @@
 
                         <!-- Nested Row within Card Body -->
                         <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                            <div class="col-lg-6 d-none d-lg-block">
+                                <img class="img-fluid mx-auto d-block" src="<?= base_url('assets'); ?>/img/logo-pasorong/logo-pasorong.png" alt="">
+                            </div>
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-teal-900 mb-1"> SIZKA </h1>
-                                        <h1 class="h5 text-teal-800 mb-1"> Sistem Informasi Izin Keluar Kantor </h1>
+                                        <h1 class="h5 text-teal-900 mb-1"> SIZKA </h1>
+                                        <h1 class="h6 text-teal-800 mb-1"> Sistem Informasi Izin Keluar Kantor </h1>
                                         <h1 class="h6 text-teal-700 mb-4"> Pengadilan Agama Sorong </h1>
                                     </div>
                                     <form action="<?= base_url('login/login') ?>" method="post" class="user">

@@ -1,10 +1,10 @@
 <!-- Sidebar -->
-<ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
+<ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion toggled" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('assets'); ?>/index.html">
-        <div class="sidebar-brand-icon rotate-n-15">
-            <i class="fas fa-laugh-wink"></i>
+        <div class="sidebar-brand-icon">
+            <i class="fas fa-envelope-open-text"></i>
         </div>
         <div class="sidebar-brand-text mx-3">SIZKA</div>
     </a>
@@ -46,7 +46,7 @@
         <a class="nav-link" href="<?= base_url('/surat/dasu'); ?>">
             <i class="fas fa-fw fa-table"></i>
             <span>Riwayat Surat</span></a>
-    </li>  
+    </li>
 
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">

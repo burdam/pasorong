@@ -61,3 +61,8 @@
 
     });
 </script>
+<script>
+    $(document).ready(function() {
+        $("#wrapper").toggleClass("toggle");
+    });
+</script>

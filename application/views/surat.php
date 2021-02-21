@@ -18,7 +18,7 @@
         <div class="container-fluid">
           <!-- Page Heading -->
           <div class="container">
-            <h1 class="h5 font-weight-bold text-success">Sistem Informasi Izin Keluar Kantor</h1>
+            <h1 class="h6 font-weight-bold text-success">Sistem Informasi Izin Keluar Kantor</h1>
             <div class="row mt-8">
               <div class="col-md-12">
                 <div class="card">

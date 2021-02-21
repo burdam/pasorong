@@ -20,7 +20,7 @@
                     <div class="container-fluid">
                         <div class="row mt-8">
                             <div class="col-md-12">
-                                <h1 class="h5 font-weight-bold text-success">Sistem Informasi Izin Keluar Kantor</h1>
+                                <h1 class="h6 font-weight-bold text-success">Sistem Informasi Izin Keluar Kantor</h1>
 
                                 <!-- DataTales Example -->
                                 <div class="card shadow mb-4">

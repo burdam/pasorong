@@ -30,7 +30,7 @@
 
                             <div class="col-md-12">
 
-                                <h1 class="h5 font-weight-bold text-success">Sistem Informasi Izin Keluar Kantor</h1>
+                                <h1 class="h6 font-weight-bold text-success">Sistem Informasi Izin Keluar Kantor</h1>
 
                                 <!-- DataTales Example -->
                                 <div class="card shadow mb-4">
@@ -48,31 +48,31 @@
                                                 <thead>
                                                     <?php $no = 1; ?>
                                                     <tr>
-                                                        <th width="1%">
+                                                        <th>
                                                             <center>No</center>
                                                         </th>
-                                                        <th width="10%">
+                                                        <th>
                                                             <center>Tanggal</center>
                                                         </th>
-                                                        <th width="1%">
+                                                        <th>
                                                             <center>NIP</center>
                                                         </th>
-                                                        <th width="1%">
+                                                        <th>
                                                             <center>Nama</center>
                                                         </th>
-                                                        <th width="1%">
+                                                        <th>
                                                             <center>Jam Keluar</center>
                                                         </th>
                                                         <th>
                                                             <center>Keperluan Izin</center>
                                                         </th>
-                                                        <th width="1%">
+                                                        <th>
                                                             <center>Jam Kembali</center>
                                                         </th>
-                                                        <th width="1%">
+                                                        <th>
                                                             <center>Atasan</center>
                                                         </th>
-                                                        <th width="1%">
+                                                        <th>
                                                             <center><a href="<?= base_url('surat'); ?>" class="btn btn-primary btn-circle btn-sm"><i class="fas fa-plus"></i></a></center>
                                                         </th>
                                                     </tr>

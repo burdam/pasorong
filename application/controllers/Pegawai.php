@@ -88,13 +88,10 @@ class Pegawai extends CI_Controller
 
     $test = $validation->set_rules('divisi', 'Divisi', 'required');
     console_log($test);
-
-
     $validation->set_rules('nip', 'NIP', 'required');
     $validation->set_rules('nama', 'Nama', 'required');
     $validation->set_rules('gol', 'Gol', 'required');
     $validation->set_rules('password', 'Password', 'required');
-
 
     if ($validation->run() == FALSE) //jika form validation gagal tampilkan kembali form tambahnya
     {

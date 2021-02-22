@@ -64,7 +64,6 @@ class Login extends CI_Controller
 
     private function set_session($user_data)
     {
-
         $this->session->set_userdata([
             'id_user' => $user_data->id_user,
             'nama' => $user_data->nama,
@@ -74,10 +73,9 @@ class Login extends CI_Controller
             'username' => $user_data->username,
             'divisi' => $user_data->divisi,
             'level' => $user_data->level,
+            'role' => $user_data->role,
             'is_login' => true
         ]);
-
-
 
         $this->session->set_flashdata('response', [
             'status' => 'success',
@@ -88,10 +86,7 @@ class Login extends CI_Controller
     private function detail_data()
     {
         $id_user = $this->session->id_user;
-
         $data['pegawaix'] = $this->pegawai->find($id_user);
-
-
         return $data;
     }
 }

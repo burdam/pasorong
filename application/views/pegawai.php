@@ -48,7 +48,7 @@
                                                             <center>Nama</center>
                                                         </th>
                                                         <th>
-                                                            <center>Sub Unit Kerja</center>
+                                                            <center>Jabatan</center>
                                                         </th>
                                                         <th>
                                                             <center>Golongan</center>
@@ -79,7 +79,7 @@
                                                                                     <?= form_error('nisn', '<small class="pl-3 text-danger">', '</small>'); ?>
                                                                                 </div>
                                                                                 <div class="form-group">
-                                                                                    <label for="divisi">Sub Unit Kerja</label>
+                                                                                    <label for="divisi">Jabatan</label>
                                                                                     <input type="text" class="form-control" id="divisi" name="divisi">
                                                                                     <?= form_error('divisi', '<small class="pl-3 text-danger">', '</small>'); ?>
                                                                                 </div>
@@ -114,7 +114,7 @@
                                                             <center>Nama</center>
                                                         </th>
                                                         <th>
-                                                            <center>Sub Unit Kerja</center>
+                                                            <center>Jabatan</center>
                                                         </th>
                                                         <th>
                                                             <center>Golongan</center>
@@ -171,7 +171,7 @@
                                                                                         <?= form_error('gol', '<small class="pl-3 text-danger">', '</small>'); ?>
                                                                                     </div>
                                                                                     <div class="form-group">
-                                                                                        <label for="divisi">Sub Unit Kerja</label>
+                                                                                        <label for="divisi">Jabatan</label>
                                                                                         <input type="text" class="form-control" id="divisi" name="divisi" value="<?= $m['divisi']; ?>">
                                                                                         <?= form_error('divisi', '<small class="pl-3 text-danger">', '</small>'); ?>
                                                                                     </div>
@@ -215,7 +215,7 @@
                                                                                     </div>
                                                                                     <div class="row">
                                                                                         <div class="col-4">
-                                                                                            <label for="nip">Sub Unit Kerja</label>
+                                                                                            <label for="nip">Jabatan</label>
                                                                                         </div>
                                                                                         <div class="col-8">
                                                                                             <label for="nip">: <?= $m['divisi']; ?></label>

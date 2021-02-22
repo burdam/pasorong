@@ -9,7 +9,7 @@ class Surat_model extends CI_Model
         return $this->db->get($this->_table)->result_array();
     }
 
-    public function tambahSurat()
+    public function tambahSurat2()
     {
 
         $now = date('y-m-d H:i:s');
@@ -23,6 +23,25 @@ class Surat_model extends CI_Model
             'jam_kembali' => $this->input->post('jam_kembali'),
             'kegiatan' => $this->input->post('kegiatan'),
             'pejabat' => $this->input->post('pejabat')
+        );
+
+        //masukan data yang berhasil di input tiap-tiap field
+        $this->db->insert($this->_table, $data);
+    }
+
+    public function tambahSurat()
+    {
+        $now = date('y-m-d H:i:s');
+
+        $data = array(
+
+            'id_user' => $this->session->userdata('id_user'),
+            'nip' => $this->session->userdata('nip'),
+            'nama' => $this->session->userdata('nama'),
+            'jam_berangkat' => $now,
+            'jam_kembali' => $this->input->post('jam_kembali'),
+            'kegiatan' => $this->input->post('kegiatan'),
+            'pejabat' => $this->input->post('pejabat'),
         );
 
         //masukan data yang berhasil di input tiap-tiap field
@@ -63,5 +82,12 @@ class Surat_model extends CI_Model
             return $data->row();
         }
         return $data;
+    }
+
+    public function getSurat($id)
+    {
+        $this->db->where('id_user', $id);
+        $result = $this->db->get('surat');
+        return $result->result_array();
     }
 }

@@ -48,6 +48,13 @@
             <span>Riwayat Surat</span></a>
     </li>
 
+    <!-- Nav Item - Tables -->
+    <li class="nav-item">
+        <a class="nav-link" href="<?= base_url('/surat/darisu'); ?>">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Riwayat Surat Pribadi</span></a>
+    </li>
+
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
 

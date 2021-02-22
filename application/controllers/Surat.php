@@ -10,17 +10,38 @@ class Surat extends CI_Controller
 		parent::__construct();
 		is_login();
 		$this->load->model('Surat_model');
+		$this->load->model('User_model');
 	}
 
 	public function index()
 	{
-		$this->load->view('surat');
+		$level_user = $this->session->userdata('level');
+		$role_user = $this->session->userdata('role');
+
+		if ($role_user == "staff") {
+			$role = "spv";
+			$data['pejabat'] =  $this->User_model->get_pejabat($level_user, $role);
+		} else {
+			$ketua = "1";
+			$role = "mgr";
+			$data['pejabat'] =  $this->User_model->get_pejabat($ketua, $role);
+		}
+
+
+		$this->load->view('surat', $data);
 	}
 
 	public function dasu()
 	{
 		$data['surat'] = $this->Surat_model->viewSurat();
 		$this->load->view('dasu', $data);
+	}
+
+	public function darisu()
+	{
+		$id = $this->session->id_user;
+		$data['surat'] = $this->Surat_model->getSurat($id);
+		$this->load->view('darisu', $data);
 	}
 
 	public function kembali($id)
@@ -33,6 +54,18 @@ class Surat extends CI_Controller
 
 	public function store()
 	{
+		$level_user = $this->session->userdata('level');
+		$role_user = $this->session->userdata('role');
+
+		if ($role_user == "staff") {
+			$role = "spv";
+			$pejabat =  $this->User_model->get_pejabat($level_user, $role);
+		} else {
+			$ketua = "1";
+			$role = "mgr";
+			$pejabat =  $this->User_model->get_pejabat($ketua, $role);
+		}
+
 		$this->load->model('Surat_model', 'surat');
 		$validation = $this->form_validation; //untuk menghemat penulisan kode
 		$validation->set_rules('id_user', 'id_user', 'required');
@@ -45,7 +78,7 @@ class Surat extends CI_Controller
 
 		if ($validation->run() == FALSE) //jika form validation gagal tampilkan kembali form tambahnya
 		{
-			$this->surat->tambahSurat();
+			$this->surat->tambahSurat($pejabat);
 			redirect('surat/dasu');
 		} else {
 

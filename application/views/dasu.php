@@ -43,7 +43,7 @@
 
                                         <div class="table-responsive">
 
-                                            <table class="table table-sm table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                            <table class="table table-sm table-bordered table-striped table-condensed table-hover" id="dataTable" width="100%" cellspacing="0">
 
                                                 <thead>
                                                     <?php $no = 1; ?>

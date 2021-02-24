@@ -37,48 +37,46 @@
 
                   <div class="card-body">
 
-                    <div class="row">
-                      <div class="col-3"><label for="nip">NIP </label>
-                      </div>
-                      <div class="col-9"> : <?php echo $this->session->userdata('nip'); ?>
-                      </div>
-                    </div>
-
-                    <div class="row">
-                      <div class="col-3"><label for="nama">Nama </label>
-                      </div>
-                      <div class="col-9"> : <?php echo $this->session->userdata('nama'); ?>
-                      </div>
-                    </div>
-
-                    <div class="row">
-                      <div class="col-3"><label for="gol">Golongan </label>
-                      </div>
-                      <div class="col-9 form"> : <?php echo $this->session->userdata('gol'); ?>
-                      </div>
-                    </div>
-
-                    <div class="row">
-                      <div class="col-3"><label for="keperluan">Atasan </label>
-                      </div>
-                      <div class="col-9"> : <?php echo $pejabat->nama; ?>
-                      </div>
-                    </div>
-
                     <form action=" <?= base_url('surat/store'); ?> " method="post">
+
+                      <div class="row">
+                        <div class="col-3"><label for="nip">NIP </label>
+                        </div>
+                        <div class="col-9 font-weight-bold"> : <?php echo $this->session->userdata('nip'); ?>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-3"><label for="nama">Nama </label>
+                        </div>
+                        <div class="col-9 font-weight-bold"> : <?php echo $this->session->userdata('nama'); ?>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-3"><label for="gol">Golongan </label>
+                        </div>
+                        <div class="col-9 font-weight-bold"> : <?php echo $this->session->userdata('gol'); ?>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-3"><label for="keperluan">Atasan </label>
+                        </div>
+                        <div class="col-9 font-weight-bold"> : <?php echo $pejabat->nama; ?>
+                        </div>
+                      </div>
 
                       <div class="form-group">
                         <input type="hidden" class="form-control" id="pejabat" name="pejabat" value="<?php echo $pejabat->nama; ?>">
                         <?= form_error('pejabat', '<small class="pl-3 text-danger">', '</small>'); ?>
                       </div>
-
                       <div class="row">
                         <div class="col-3"><label for="keperluan">Keperluan </label>
                         </div>
                         <div class="col-9"> :
                         </div>
                       </div>
-
                       <div class="row">
                         <div class="col-12">
                           <div class="form-group">
@@ -87,7 +85,6 @@
                           </div>
                         </div>
                       </div>
-
                       <div class="row">
                         <div class="col-12">
                           <button type="submit" name="tambah" class="btn btn-success btn-circle btn-sm float-right"><i class="fas fa-check"></i></button>

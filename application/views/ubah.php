@@ -19,16 +19,23 @@
             <span class="navbar-brand mb-0 h1">Panduan Code</span>
         </div>
     </nav>
+
     <div class="container">
+
         <div class="row mt-4">
+
             <div class="col-md-6">
                 <h3>Ubah Data Pegawai</h3>
+
                 <div class="card">
+
                     <div class="card-header">
                         Ubah Data Pegawai
                     </div>
+
                     <div class="card-body">
                         <form action="" method="post">
+
                             <input type="hidden" value="<?= $pegawai['id_user']; ?>" name="id_user">
                             <div class="form-group">
                                 <label for="nip">NIP</label>
@@ -51,11 +58,17 @@
                                 <?= form_error('divisi', '<small class="pl-3 text-danger">', '</small>'); ?>
                             </div>
                             <button type="submit" class="btn btn-success float-right" name="Ubah">Ubah</button>
+
                         </form>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </div>
     <!-- Optional JavaScript -->
     <script src="<?= base_url('assets') ?>/js/bootstrap.min.js"></script>

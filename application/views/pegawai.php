@@ -6,19 +6,26 @@
 </head>
 
 <body id="page-top">
+
     <!-- Page Wrapper -->
     <div id="wrapper">
         <?php $this->load->view("/admin/_partials/sidebar.php") ?>
+
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
+
             <!-- Main Content -->
             <div id="content">
                 <?php $this->load->view("/admin/_partials/topbar.php") ?>
+
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
+
                     <!-- Page Heading -->
                     <div class="container-fluid">
+
                         <div class="row mt-8">
+
                             <div class="col-md-12">
                                 <h1 class="h6 font-weight-bold text-success">Sistem Informasi Izin Keluar Kantor</h1>
 
@@ -252,10 +259,12 @@
 
                                 </div>
 
-
                             </div>
+
                         </div>
+
                     </div>
+
                 </div>
                 <!-- /.container-fluid -->
             </div>

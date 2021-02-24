@@ -19,15 +19,22 @@
             <span class="navbar-brand mb-0 h1">Pengadilan Agama Sorong</span>
         </div>
     </nav>
+
     <div class="container">
+
         <div class="row mt-4">
+
             <div class="col-md-6">
                 <h3>Tambah Data Pegawai</h3>
+
                 <div class="card">
+
                     <div class="card-header">
                         Masukan Data Pegawai
                     </div>
+
                     <div class="card-body">
+
                         <form action="" method="post">
                             <div class="form-group">
                                 <label for="nip">NIP</label>
@@ -51,11 +58,17 @@
                             </div>
                             <button type="submit" class="btn btn-primary float-right" name="tambah">Tambah</button>
                             <a href="<?= base_url('pegawai'); ?>" class="btn btn-danger mb-2">Kembali</a>
+
                         </form>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </div>
     <!-- Optional JavaScript -->
     <script src="<?= base_url('assets') ?>/js/bootstrap.min.js"></script>

@@ -44,10 +44,7 @@ class Pegawai extends CI_Controller
   private function detail_data()
   {
     $id_user = $this->session->id_user;
-
     $data['pegawaix'] = $this->pegawai->find($id_user);
-
-
     return $data;
   }
 
@@ -58,12 +55,9 @@ class Pegawai extends CI_Controller
 
     $test = $validation->set_rules('divisi', 'Divisi', 'required');
     console_log($test);
-
-
     $validation->set_rules('nip', 'NIP', 'required');
     $validation->set_rules('nama', 'Nama', 'required');
     $validation->set_rules('gol', 'Gol', 'required');
-
 
     if ($validation->run() == FALSE) //jika form validation gagal tampilkan kembali form tambahnya
     {

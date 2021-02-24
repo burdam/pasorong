@@ -11,11 +11,8 @@ class Surat_model extends CI_Model
 
     public function tambahSurat2()
     {
-
         $now = date('y-m-d H:i:s');
-
         $data = array(
-
             'id_user' => $this->session->userdata('id_user'),
             'nip' => $this->session->userdata('nip'),
             'nama' => $this->session->userdata('nama'),
@@ -24,7 +21,6 @@ class Surat_model extends CI_Model
             'kegiatan' => $this->input->post('kegiatan'),
             'pejabat' => $this->input->post('pejabat')
         );
-
         //masukan data yang berhasil di input tiap-tiap field
         $this->db->insert($this->_table, $data);
     }
@@ -32,9 +28,7 @@ class Surat_model extends CI_Model
     public function tambahSurat()
     {
         $now = date('y-m-d H:i:s');
-
         $data = array(
-
             'id_user' => $this->session->userdata('id_user'),
             'nip' => $this->session->userdata('nip'),
             'nama' => $this->session->userdata('nama'),
@@ -43,7 +37,6 @@ class Surat_model extends CI_Model
             'kegiatan' => $this->input->post('kegiatan'),
             'pejabat' => $this->input->post('pejabat'),
         );
-
         //masukan data yang berhasil di input tiap-tiap field
         $this->db->insert($this->_table, $data);
     }
@@ -62,13 +55,9 @@ class Surat_model extends CI_Model
     public function ubahSurat($id, $data)
     {
         $now = date('y-m-d H:i:s');
-
         $data = array(
-
             'jam_kembali' =>  $now,
-
         );
-
         //cari id berdasarkan id yang ada dalam inputan
         $this->db->where('id_surat', $id);
         $this->db->update($this->_table, $data);

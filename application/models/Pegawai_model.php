@@ -17,7 +17,6 @@ class Pegawai_model extends CI_Model
             'gol' => $this->input->post('gol', true),
             'divisi' => $this->input->post('divisi', true)
         );
-
         //masukan data yang berhasil di input tiap-tiap field
         $this->db->insert($this->_table, $data);
     }
@@ -35,7 +34,6 @@ class Pegawai_model extends CI_Model
 
     public function ubahPegawai($id)
     {
-
         $data = array(
             'nip' => $this->input->post('nip'),
             'nama' => $this->input->post('nama'),
@@ -43,7 +41,6 @@ class Pegawai_model extends CI_Model
             'divisi' => $this->input->post('divisi')
         );
         console_log($data);
-
         //cari id berdasarkan id yang ada dalam inputan
         $this->db->where('id_user', $id);
         $this->db->update($this->_table, $data);
@@ -51,7 +48,6 @@ class Pegawai_model extends CI_Model
 
     public function ubahProfil($id)
     {
-
         $data = array(
             'nip' => $this->input->post('nip'),
             'nama' => $this->input->post('nama'),
@@ -60,7 +56,6 @@ class Pegawai_model extends CI_Model
             'password' => $this->input->post('password')
         );
         console_log($data);
-
         //cari id berdasarkan id yang ada dalam inputan
         $this->db->where('id_user', $id);
         $this->db->update($this->_table, $data);

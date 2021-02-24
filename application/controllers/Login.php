@@ -53,7 +53,6 @@ class Login extends CI_Controller
         } else {
             $this->error('Login gagal! <br>User tidak ditemukan');
         }
-
         redirect('login/');
     }
 

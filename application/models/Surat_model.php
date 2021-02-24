@@ -90,4 +90,11 @@ class Surat_model extends CI_Model
         $result = $this->db->get('surat');
         return $result->result_array();
     }
+
+    public function getPejabat($pejabat)
+    {
+        $this->db->where('pejabat', $pejabat);
+        $result = $this->db->get('surat');
+        return $result->result_array();
+    }
 }

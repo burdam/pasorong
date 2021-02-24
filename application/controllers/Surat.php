@@ -26,8 +26,6 @@ class Surat extends CI_Controller
 			$role = "mgr";
 			$data['pejabat'] =  $this->User_model->get_pejabat($ketua, $role);
 		}
-
-
 		$this->load->view('surat', $data);
 	}
 
@@ -42,6 +40,13 @@ class Surat extends CI_Controller
 		$id = $this->session->id_user;
 		$data['surat'] = $this->Surat_model->getSurat($id);
 		$this->load->view('darisu', $data);
+	}
+
+	public function darisulvl()
+	{
+		$pejabat = $this->session->userdata('nama');
+		$data['surat'] = $this->Surat_model->getPejabat($pejabat);
+		$this->load->view('darisulvl', $data);
 	}
 
 	public function kembali($id)
@@ -81,7 +86,6 @@ class Surat extends CI_Controller
 			$this->surat->tambahSurat($pejabat);
 			redirect('surat/dasu');
 		} else {
-
 			redirect('surat');
 		}
 	}

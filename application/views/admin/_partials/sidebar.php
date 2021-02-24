@@ -51,14 +51,14 @@
     <!-- Nav Item - Tables -->
     <li class="nav-item">
         <a class="nav-link" href="<?= base_url('/surat/darisu'); ?>">
-            <i class="fas fa-fw fa-table"></i>
+            <i class="fas fa-fw fa-address-card"></i>
             <span>Riwayat Surat Pribadi</span></a>
     </li>
 
     <!-- Nav Item - Tables -->
     <li class="nav-item">
         <a class="nav-link" href="<?= base_url('/surat/darisulvl'); ?>">
-            <i class="fas fa-fw fa-table"></i>
+            <i class="fas fa-fw fa-list-alt"></i>
             <span>Riwayat Surat Unit Kerja</span></a>
     </li>
 

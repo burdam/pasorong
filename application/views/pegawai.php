@@ -61,7 +61,7 @@
                                                             <center>Golongan</center>
                                                         </th>
                                                         <th>
-                                                            <center><button type="button" class="btn btn-primary btn-circle btn-sm" data-toggle="modal" data-target="#addModal"><i class="fas fa-plus"></i></button></center>
+                                                            <center><button type="button" class="btn btn-primary btn-circle btn-sm" data-toggle="modal" data-target="#addModal"><i class="fas fa-user-plus"></i></button></center>
 
                                                             <!-- Modal Add Product-->
                                                             <form action="<?= base_url('pegawai/tambah/'); ?>" method="post">
@@ -127,7 +127,7 @@
                                                             <center>Golongan</center>
                                                         </th>
                                                         <th>
-                                                            <center><button type="button" class="btn btn-primary btn-circle btn-sm" data-toggle="modal" data-target="#addModal"><i class="fas fa-plus"></i></button></center>
+                                                            <center><button type="button" class="btn btn-primary btn-circle btn-sm" data-toggle="modal" data-target="#addModal"><i class="fas fa-user-plus"></i></button></center>
                                                         </th>
                                                     </tr>
                                                 </tfoot>
@@ -146,8 +146,8 @@
                                                             </td>
                                                             <td>
                                                                 <center>
-                                                                    <a href="#" class="btn btn-warning btn-circle btn-sm" data-toggle="modal" data-target="#editModal<?= $m['id_user']; ?>"><i class="fas fa-edit"></i></a>
-                                                                    <a href="#" class="btn btn-danger btn-circle btn-sm" data-toggle="modal" data-target="#deleteModal<?= $m['id_user']; ?>"><i class="fas fa-trash"></i></a>
+                                                                    <a href="#" class="btn btn-info btn-circle btn-sm" data-toggle="modal" data-target="#editModal<?= $m['id_user']; ?>"><i class="fas fa-user-cog"></i></a>
+                                                                    <a href="#" class="btn btn-danger btn-circle btn-sm" data-toggle="modal" data-target="#deleteModal<?= $m['id_user']; ?>"><i class="fas fa-user-minus"></i></a>
                                                                 </center>
 
                                                                 <!-- Modal Edit Product-->

@@ -10,10 +10,9 @@
             </div>
             <div class="modal-body">Pilih tombol "Keluar" untuk meninggalkan aplikasi.</div>
             <div class="modal-footer">
-                <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-                <a class="btn btn-primary" href="<?= base_url('pegawai/logout'); ?>">Keluar</a>
+                <button class="btn btn-secondary btn-circle btn-sm" type="button" data-dismiss="modal"><i class="fas fa-times"></i></button>
+                <a class="btn btn-danger btn-circle btn-sm" href="<?= base_url('pegawai/logout'); ?>"><i class="fas fa-sign-out-alt"></i></a>
             </div>
         </div>
     </div>
 </div>
-

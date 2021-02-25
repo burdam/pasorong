@@ -54,7 +54,7 @@ class Surat extends CI_Controller
 		$this->load->model('Surat_model', 'surat');
 		$data['surat'] = $this->Surat_model->getById($id);
 		$this->surat->ubahSurat($id, $data);
-		redirect('surat/dasu');
+		redirect('surat/darisu');
 	}
 
 	public function store()

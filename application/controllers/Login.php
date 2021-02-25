@@ -46,7 +46,7 @@ class Login extends CI_Controller
 
             if ($verify_password) {
                 $this->set_session($user_data);
-                redirect('pegawai');
+                redirect('dashboard');
             } else {
                 $this->error('Login gagal! <br>Password tidak sesuai');
             }

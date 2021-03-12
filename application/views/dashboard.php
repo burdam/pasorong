@@ -38,18 +38,21 @@
 
 									<div class="card-body">
 
-										<h1 class="h3 mb-4 font-weight-bold text-success">Selamat Datang!</h1>
+										<h1 class="h5 mb-4 font-weight-bold text-success">Selamat Datang! <?php echo $this->session->userdata('nama'); ?></h1></span>
 
 										<!-- Collapsable Card Example -->
 										<div class="card shadow mb-4">
 											<!-- Card Header - Accordion -->
-											<a href="#collapseCardExample1" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
-												<h6 class="m-0 font-weight-bold text-success">Informasi</h6>
+											<a href="#collapseCardExample3" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+												<h6 class="m-0 font-weight-bold text-success">Panduan</h6>
 											</a>
 											<!-- Card Content - Collapse -->
-											<div class="collapse show" id="collapseCardExample1">
+											<div class="collapse show" id="collapseCardExample3">
 												<div class="card-body">
-
+													<span>1. Saat ini Anda berada di halaman Dashboard</span>
+													<span>2. Saat ini Anda berada di halaman Dashboard</span>
+													<span>3. Saat ini Anda berada di halaman Dashboard</span>
+													<span>4. Saat ini Anda berada di halaman Dashboard</span>
 												</div>
 											</div>
 										</div>
@@ -71,13 +74,13 @@
 										<!-- Collapsable Card Example -->
 										<div class="card shadow mb-4">
 											<!-- Card Header - Accordion -->
-											<a href="#collapseCardExample3" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
-												<h6 class="m-0 font-weight-bold text-success">Panduan</h6>
+											<a href="#collapseCardExample1" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+												<h6 class="m-0 font-weight-bold text-success">Informasi</h6>
 											</a>
 											<!-- Card Content - Collapse -->
-											<div class="collapse show" id="collapseCardExample3">
+											<div class="collapse show" id="collapseCardExample1">
 												<div class="card-body">
-
+													<span>Web Aplikasi SIZKA (Sistem Izin Keluar Kantor) dibuat dan dikembangkan oleh Pengadilan Agama Sorong dengan tujuan untuk memudahkan proses pembuatan surat izin keluar kantor.</span>
 												</div>
 											</div>
 										</div>

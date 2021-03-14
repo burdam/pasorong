@@ -157,7 +157,7 @@
                                                                 </td>
                                                             <?php else : ?>
                                                                 <td>
-                                                                    <center><a href="<?= base_url('surat/kembali/'); ?><?= $m['id_surat']; ?>" class="btn btn-secondary btn-circle btn-sm"><i class="fas fa-print"></i></a></center>
+                                                                    <center><a href="<?= base_url('surat/cetak/'); ?><?= $m['id_surat']; ?>" class="btn btn-secondary btn-circle btn-sm"><i class="fas fa-print"></i></a></center>
                                                                 </td>
                                                             <?php endif; ?>
                                                         </tr>

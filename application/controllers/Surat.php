@@ -89,4 +89,11 @@ class Surat extends CI_Controller
 			redirect('surat');
 		}
 	}
+
+	public function cetak($id)
+	{
+		$this->load->model('Surat_model', 'surat');
+		$data['surat'] = $this->Surat_model->previewSurat('id_surat', $id, true);
+		$this->load->view('cetaksurat', $data);
+	}
 }

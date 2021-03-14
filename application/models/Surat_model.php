@@ -86,4 +86,14 @@ class Surat_model extends CI_Model
         $result = $this->db->get('surat');
         return $result->result_array();
     }
+
+    public function previewSurat($field, $id, $return = FALSE)
+    {
+        $this->db->where($field, $id);
+        $data = $this->db->get('surat');
+        if ($return) {
+            return $data->row();
+        }
+        return $data;
+    }
 }

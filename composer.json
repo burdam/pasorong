@@ -3,7 +3,19 @@
     "description": "Sistem Informasi Izin Keluar Masuk Kantor",
     "type": "project",
     "license": "GPL",
+    "support": {
+        "forum": "http://forum.codeigniter.com/",
+        "wiki": "https://github.com/bcit-ci/CodeIgniter/wiki",
+        "irc": "irc://irc.freenode.net/codeigniter",
+        "source": "https://github.com/bcit-ci/CodeIgniter"
+    },
     "require": {
-        "nesbot/carbon": "^2.46"
+        "nesbot/carbon": "^2.46",
+        "php": ">=5.2.4",
+        "setasign/fpdf": "1.8.1",
+        "dompdf/dompdf": "^1.0"
+    },
+    "require-dev": {
+        "mikey179/vfsstream": "1.1.*"
     }
 }

@@ -15,7 +15,12 @@ class Pegawai_model extends CI_Model
             'nip' => $this->input->post('nip', true),
             'nama' => $this->input->post('nama', true),
             'gol' => $this->input->post('gol', true),
-            'divisi' => $this->input->post('divisi', true)
+            'divisi' => $this->input->post('divisi', true),
+            'username' => $this->input->post('username', true),
+            'password' => $this->input->post('password', true),
+            'level' => $this->input->post('level', true),
+            'role' => $this->input->post('role', true),
+            'ttd' => $this->input->post('ttd', true)
         );
         //masukan data yang berhasil di input tiap-tiap field
         $this->db->insert($this->_table, $data);

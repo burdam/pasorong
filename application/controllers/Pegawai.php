@@ -25,6 +25,11 @@ class Pegawai extends CI_Controller
     $validation->set_rules('nama', 'Nama', 'required');
     $validation->set_rules('gol', 'Gol', 'required');
     $validation->set_rules('divisi', 'Unit Kerja', 'required');
+    $validation->set_rules('username', 'Username', 'required');
+    $validation->set_rules('password', 'Password', 'required');
+    $validation->set_rules('level', 'Level', 'required');
+    $validation->set_rules('role', 'Role', 'required');
+    $validation->set_rules('ttd', 'TTD', 'required');
 
     if ($validation->run() == FALSE) //jika form validation gagal tampilkan kembali form tambahnya
     {

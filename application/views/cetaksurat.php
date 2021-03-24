@@ -1,156 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <?php $this->load->view("/admin/_partials/head.php") ?>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="utf-8">
+    <title>Cetak Surat Izin Keluar Kantor</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
 </head>
 
-<body id="page-top">
+<body>
 
-    <!-- Page Wrapper -->
-    <div id="wrapper">
-        <?php $this->load->view("/admin/_partials/sidebar.php") ?>
+    <table border="0" width="100%" style="text-align:left;">
+        <tr>
+            <td>Lampiran 2</td>
+        </tr>
+        <tr>
+            <td>SK Ketua Mahkamah Agung RI</td>
+        </tr>
+        <tr>
+            <td>Nomor</td>
+            <td>:</td>
+            <td>071/KMA/SK/V/2008</td>
+        </tr>
+        <tr>
+            <td>Tanggal</td>
+            <td>:</td>
+            <td>14 Mei 2008</td>
+        </tr>
+    </table>
+    <hr />
+    <p>
+        <center><b>SURAT IZIN KELUAR KANTOR</b></center>
+    </p>
 
-        <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
+    <p>&nbsp;</p>
 
-            <!-- Main Content -->
-            <div id="content">
-                <?php $this->load->view("/admin/_partials/topbar.php") ?>
+    <p>Pejabat, <?= $surat->pejabat ?></p>
 
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
+    <p>&nbsp;</p>
 
-                    <!-- Page Heading -->
-                    <div class="container-fluid">
+    <p>Memberikan izin keluar kantor kepada :</p>
 
-                        <div class="row mt-8">
+    <table border="0" width="100%" style="text-align:left;">
 
-                            <div class="col-md-12">
-                                <h1 class="h6 font-weight-bold text-success">SIZKA - Sistem Informasi Izin Keluar Kantor</h1>
+        <tr>
+            <td>Nama</td>
+            <td>:</td>
+            <td><?= $surat->nama ?></td>
+        </tr>
+        <tr>
+            <td>NIP</td>
+            <td>:</td>
+            <td><?= $surat->nip ?></td>
+        </tr>
+        <tr>
+            <td>Unit Kerja</td>
+            <td>:</td>
+            <td>PENGADILAN AGAMA SORONG</td>
+        </tr>
+        <tr>
+            <td>Untuk Keperluan</td>
+            <td>:</td>
+            <td><?= $surat->kegiatan ?></td>
+        </tr>
+        <tr>
+            <td>Jam Keluar</td>
+            <td>:</td>
+            <td><?php $berangkat = date('H:i', strtotime($surat->jam_berangkat));    ?>
+                <?= $berangkat; ?> WIT</td>
+        </tr>
+        <tr>
+            <td>Jam Kembali</td>
+            <td>:</td>
+            <td><?php $kembali = date('H:i', strtotime($surat->jam_kembali));    ?>
+                <?= $kembali; ?> WIT</td>
+        </tr>
 
-                                <!-- DataTales Example -->
-                                <div class="card shadow mb-4">
+    </table>
 
-                                    <div class="card-header py-3">
-                                        <h1 class="h6 m-0 font-weight-bold text-success">Preview Surat</h1>
-                                    </div>
+    <p>&nbsp;</p>
 
-                                    <div class="card-body">
+    <p>Sorong, <?php $berangkat = date('d M Y', strtotime($surat->jam_berangkat));    ?>
+        <?= $berangkat; ?></p>
 
-                                        <div class="row mt-12">
-                                            <div class="col-md-6"></div>
-                                            <div class="col-md-6">Lampiran 2</div>
-                                        </div>
+    <p>Pejabat yang memberikan izin</p>
 
-                                        <div class="row mt-12">
-                                            <div class="col-md-6"></div>
-                                            <div class="col-md-6">SK Ketua Mahkamah Agung RI</div>
-                                        </div>
+    <p><?= $surat->pejabat ?></p>
 
-                                        <div class="row mt-12">
-                                            <div class="col-md-6"></div>
-                                            <div class="col-md-2">Nomor</div>
-                                            <div class="col-md-4">: 071/KMA/SK/V/2008</div>
-                                        </div>
+    <p>&nbsp;</p>
 
-                                        <div class="row mt-12">
-                                            <div class="col-md-6"></div>
-                                            <div class="col-md-2">Tanggal</div>
-                                            <div class="col-md-4">: 14 Mei 2008</div>
-                                        </div>
+    <p>Keterangan.</p>
 
-                                        <div class="row mt-12">
-                                            <div class="col-md-12 text-center">SURAT IZIN KELUAR KANTOR</div>
-                                        </div>
-
-                                        <div class="row mt-12">
-                                            <div class="col-md-12">Pejabat, <?= $surat->pejabat ?>
-                                            </div>
-                                        </div>
-
-                                        <div class="row mt-12">
-                                            <div class="col-md-12">Memberikan izin keluar kantor kepada : </div>
-                                        </div>
-
-                                        <div class="row mt-12">
-                                            <div class="col-md-2">Nama</div>
-                                            <div class="col-md-7">: <?= $surat->nama ?></div>
-                                        </div>
-
-                                        <div class="row mt-12">
-                                            <div class="col-md-2">NIP</div>
-                                            <div class="col-md-7">: <?= $surat->nip ?></div>
-                                        </div>
-
-                                        <div class="row mt-12">
-                                            <div class="col-md-2">Unit Kerja</div>
-                                            <div class="col-md-7">: PENGADILAN AGAMA SORONG</div>
-                                        </div>
-
-                                        <div class="row mt-12">
-                                            <div class="col-md-2">Untuk Keperluan</div>
-                                            <div class="col-md-7">: <?= $surat->kegiatan ?></div>
-                                        </div>
-
-                                        <div class="row mt-12">
-                                            <div class="col-md-2">Jam Keluar</div>
-                                            <div class="col-md-7">: <?php $berangkat = date('H:i', strtotime($surat->jam_berangkat));    ?>
-                                                <?= $berangkat; ?> WIT</div>
-                                        </div>
-
-                                        <div class="row mt-12">
-                                            <div class="col-md-2">Jam Kembali</div>
-                                            <div class="col-md-7">: <?php $kembali = date('H:i', strtotime($surat->jam_kembali));    ?>
-                                                <?= $kembali; ?> WIT</div>
-                                        </div>
-
-                                        <div class="row mt-12">
-                                            <div class="col-md-6"></div>
-                                            <div class="col-md-6">Sorong, <?php $berangkat = date('d M Y', strtotime($surat->jam_berangkat));    ?>
-                                                <?= $berangkat; ?></div>
-                                        </div>
-
-                                        <div class="row mt-12">
-                                            <div class="col-md-6"></div>
-                                            <div class="col-md-6">Pejabat yang memberikan izin</div>
-                                        </div>
-
-                                        <div class="row mt-12">
-                                            <div class="col-md-6"></div>
-                                            <div class="col-md-6"><?= $surat->pejabat ?></div>
-                                        </div>
-
-                                        <div class="row mt-12">
-                                            <div class="col-md-12">Keterangan.</div>
-                                        </div>
-
-                                        <div class="row mt-12">
-                                            <div class="col-md-12">..... pejabat atasan langsung dari Hakim atau Pegawai Negeri yang memohon izin keluar kantor</div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-                <!-- /.container-fluid -->
-            </div>
-            <!-- End of Main Content -->
-            <?php $this->load->view("/admin/_partials/footer.php") ?>
-        </div>
-        <!-- End of Content Wrapper -->
-    </div>
-    <!-- End of Page Wrapper -->
-    <?php $this->load->view("/admin/_partials/scrolltop.php") ?>
-    <?php $this->load->view("/admin/_partials/modal.php") ?>
-    <?php $this->load->view("/admin/_partials/js.php") ?>
+    <p>..... pejabat atasan langsung dari Hakim atau Pegawai Negeri yang memohon izin keluar kantor</p>
 </body>
 
 </html>

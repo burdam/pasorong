@@ -94,6 +94,11 @@ class Surat extends CI_Controller
 	{
 		$this->load->model('Surat_model', 'surat');
 		$data['surat'] = $this->Surat_model->previewSurat('id_surat', $id, true);
-		$this->load->view('cetaksurat', $data);
+		//$this->load->view('cetaksurat', $data);
+
+		$this->load->library('pdf');
+		$this->pdf->setPaper('A4', 'potrait');
+		$this->pdf->filename = "laporan-petanikode.pdf";
+		$this->pdf->load_view('cetaksurat', $data);
 	}
 }

@@ -4,7 +4,11 @@
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('assets'); ?>/index.html">
         <div class="sidebar-brand-icon">
-            <i class="fas fa-envelope-open-text"></i>
+            <i class="fas fa-envelope-open-text">
+
+                <h6 class="my-0 text-center text-xs"><label id="hours"><?= date('H') ?></label>:<label id="minutes"><?= date('i') ?></label>:<label id="seconds"><?= date('s') ?></label></h6>
+
+            </i>
         </div>
         <div class="sidebar-brand-text mx-3">SIZKA</div>
     </a>
@@ -72,3 +76,24 @@
 
 </ul>
 <!-- End of Sidebar -->
+<script>
+    var hoursLabel = document.getElementById("hours");
+    var minutesLabel = document.getElementById("minutes");
+    var secondsLabel = document.getElementById("seconds");
+    setInterval(setTime, 1000);
+
+    function setTime() {
+        secondsLabel.innerHTML = pad(Math.floor(new Date().getSeconds()));
+        minutesLabel.innerHTML = pad(Math.floor(new Date().getMinutes()));
+        hoursLabel.innerHTML = pad(Math.floor(new Date().getHours()));
+    }
+
+    function pad(val) {
+        var valString = val + "";
+        if (valString.length < 2) {
+            return "0" + valString;
+        } else {
+            return valString;
+        }
+    }
+</script>

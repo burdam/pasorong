@@ -83,7 +83,7 @@
     <table border="0" width="50%" align="right" style="text-align:left;">
 
         <tr>
-            <td>Sorong, <?php $berangkat = date('d M Y', strtotime($surat->jam_berangkat));    ?>
+            <td>Sorong, <?php $berangkat = date_indo('Y-m-d', strtotime($surat->jam_berangkat));    ?>
                 <?= $berangkat; ?></td>
         </tr>
         <tr>

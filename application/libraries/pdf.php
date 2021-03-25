@@ -13,6 +13,7 @@
  */
 
 use Dompdf\Dompdf;
+use Dompdf\Options;
 
 class Pdf extends Dompdf
 {
@@ -20,11 +21,18 @@ class Pdf extends Dompdf
      * PDF filename
      * @var String
      */
-    public $filename;
+    protected $ci;
+    private $filename;
+
     public function __construct()
     {
         parent::__construct();
-        $this->filename = "laporan.pdf";
+        $this->ci = &get_instance();
+        //$this->filename = "laporan.pdf";
+    }
+    public function setFileName($filename)
+    {
+        $this->filename = $filename;
     }
     /**
      * Get an instance of CodeIgniter
@@ -46,8 +54,19 @@ class Pdf extends Dompdf
      */
     public function load_view($view, $data = array())
     {
-        $html = $this->ci()->load->view($view, $data, TRUE);
-        $this->load_html($html);
+        $options = new Options();
+        $options->setChroot(FCPATH);
+        $options->set('isRemoteEnabled', TRUE);
+        //$options->setDefaultFont('courier');
+        $dompdf = new Dompdf($options);
+        $dompdf->getOptions()->getChroot();
+
+        $this->setOptions($options);
+
+        $html = $this->ci->load->view($view, $data, TRUE);
+        $this->loadHtml($html);
+        //$this->load_html($html);
+
         // Render the PDF
         $this->render();
         // Output the generated PDF to Browser

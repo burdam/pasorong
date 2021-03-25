@@ -57,6 +57,39 @@
                                 <input type="text" class="form-control" id="divisi" name="divisi" value="<?= $pegawai['divisi']; ?>">
                                 <?= form_error('divisi', '<small class="pl-3 text-danger">', '</small>'); ?>
                             </div>
+
+                            <div class="form-group">
+                                <label for="role">Role</label>
+                                <select name="role" id="role" class="form-control">
+                                    <option value="s-admin">Super-Admin</option>
+                                    <option value="admin">Admin</option>
+                                    <option value="mgr">Manager</option>
+                                    <option value="spv">Supervisior</option>
+                                    <option value="staff">Staff</option>
+                                </select>
+                                <?= form_error('role', '<small class="pl-3 text-danger">', '</small>'); ?>
+                            </div>
+                            <div class="form-group">
+                                <label for="level">Level</label>
+                                <input type="text" class="form-control" id="level" name="level">
+                                <?= form_error('level', '<small class="pl-3 text-danger">', '</small>'); ?>
+                            </div>
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="text" class="form-control" id="username" name="username">
+                                <?= form_error('username', '<small class="pl-3 text-danger">', '</small>'); ?>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" name="password">
+                                <?= form_error('password', '<small class="pl-3 text-danger">', '</small>'); ?>
+                            </div>
+                            <div class="form-group">
+                                <label for="ttd">TTD</label>
+                                <input type="file" class="form-control" id="ttd" name="ttd">
+                                <?= form_error('gol', '<small class="pl-3 text-danger">', '</small>'); ?>
+                            </div>
+
                             <button type="submit" class="btn btn-success float-right" name="Ubah">Ubah</button>
 
                         </form>

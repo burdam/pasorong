@@ -10,12 +10,12 @@
 
 <body>
 
-    <table border="0" width="100%" style="text-align:left;">
+    <table border="0" width="35%" align="right" style="text-align:left;">
         <tr>
-            <td>Lampiran 2</td>
+            <td colspan="3">Lampiran 2</td>
         </tr>
         <tr>
-            <td>SK Ketua Mahkamah Agung RI</td>
+            <td colspan="3">SK Ketua Mahkamah Agung RI</td>
         </tr>
         <tr>
             <td>Nomor</td>
@@ -27,17 +27,17 @@
             <td>:</td>
             <td>14 Mei 2008</td>
         </tr>
-    </table>
+    </table><br><br><br><br>
     <hr />
     <p>
         <center><b>SURAT IZIN KELUAR KANTOR</b></center>
     </p>
 
-    <p>&nbsp;</p>
+    <br><br>
 
     <p>Pejabat, <?= $surat->pejabat ?></p>
 
-    <p>&nbsp;</p>
+    <br>
 
     <p>Memberikan izin keluar kantor kepada :</p>
 
@@ -80,18 +80,29 @@
 
     <p>&nbsp;</p>
 
-    <p>Sorong, <?php $berangkat = date('d M Y', strtotime($surat->jam_berangkat));    ?>
-        <?= $berangkat; ?></p>
+    <table border="0" width="50%" align="right" style="text-align:left;">
 
-    <p>Pejabat yang memberikan izin</p>
+        <tr>
+            <td>Sorong, <?php $berangkat = date('d M Y', strtotime($surat->jam_berangkat));    ?>
+                <?= $berangkat; ?></td>
+        </tr>
+        <tr>
+            <td>Pejabat yang memberikan izin</td>
+        </tr>
+        <tr>
+            <td><img src="<?= base_url('assets/img/ttd/' . $surat->ttd) ?>" alt="" height="150"></td>
+        </tr>
+        <tr>
+            <td><?= $surat->pejabat ?></td>
+        </tr>
 
-    <p><?= $surat->pejabat ?></p>
+    </table><br><br><br><br><br><br><br><br><br><br>
 
     <p>&nbsp;</p>
 
     <p>Keterangan.</p>
 
-    <p>..... pejabat atasan langsung dari Hakim atau Pegawai Negeri yang memohon izin keluar kantor</p>
+    <p>Nama pejabat atasan langsung dari Hakim atau Pegawai Negeri yang memohon izin keluar kantor</p>
 </body>
 
 </html>

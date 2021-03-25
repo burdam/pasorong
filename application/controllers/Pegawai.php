@@ -20,16 +20,15 @@ class Pegawai extends CI_Controller
   {
     $validation = $this->form_validation; //untuk menghemat penulisan kode
 
-    $test =    $validation->set_rules('nip', 'NIP', 'required');
+    $test = $validation->set_rules('nip', 'NIP', 'required');
     console_log($test);
     $validation->set_rules('nama', 'Nama', 'required');
     $validation->set_rules('gol', 'Gol', 'required');
-    $validation->set_rules('divisi', 'Unit Kerja', 'required');
+    $validation->set_rules('divisi', 'Divisi', 'required');
+    $validation->set_rules('role', 'Role', 'required');
+    $validation->set_rules('level', 'Level', 'required');
     $validation->set_rules('username', 'Username', 'required');
     $validation->set_rules('password', 'Password', 'required');
-    $validation->set_rules('level', 'Level', 'required');
-    $validation->set_rules('role', 'Role', 'required');
-    $validation->set_rules('ttd', 'TTD', 'required');
 
     if ($validation->run() == FALSE) //jika form validation gagal tampilkan kembali form tambahnya
     {
@@ -63,6 +62,11 @@ class Pegawai extends CI_Controller
     $validation->set_rules('nip', 'NIP', 'required');
     $validation->set_rules('nama', 'Nama', 'required');
     $validation->set_rules('gol', 'Gol', 'required');
+    $validation->set_rules('username', 'Username', 'required');
+    $validation->set_rules('password', 'Password', 'required');
+    $validation->set_rules('level', 'Level', 'required');
+    $validation->set_rules('role', 'Role', 'required');
+
 
     if ($validation->run() == FALSE) //jika form validation gagal tampilkan kembali form tambahnya
     {
@@ -91,6 +95,10 @@ class Pegawai extends CI_Controller
     $validation->set_rules('nama', 'Nama', 'required');
     $validation->set_rules('gol', 'Gol', 'required');
     $validation->set_rules('password', 'Password', 'required');
+    $validation->set_rules('username', 'Username', 'required');
+    $validation->set_rules('level', 'Level', 'required');
+    $validation->set_rules('role', 'Role', 'required');
+
 
     if ($validation->run() == FALSE) //jika form validation gagal tampilkan kembali form tambahnya
     {

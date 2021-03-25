@@ -98,22 +98,21 @@
 
                                                                                 <div class="form-group">
                                                                                     <label for="role">Role</label>
-                                                                                    <select name="role" id="role" class="form-control">
-                                                                                        <option value="s-admin">Super-Admin</option>
-                                                                                        <option value="admin">Admin</option>
-                                                                                        <option value="mgr">Manager</option>
-                                                                                        <option value="spv">Supervisior</option>
+                                                                                    <select class="form-control" id="role" name="role">
                                                                                         <option value="staff">Staff</option>
+                                                                                        <option value="spv">Supervisior</option>
+                                                                                        <option value="mgr">Manager</option>
+                                                                                        <option value="admin">Admin</option>
                                                                                     </select>
                                                                                     <?= form_error('role', '<small class="pl-3 text-danger">', '</small>'); ?>
                                                                                 </div>
-
 
                                                                                 <div class="form-group">
                                                                                     <label for="level">Level</label>
                                                                                     <input type="text" class="form-control" id="level" name="level">
                                                                                     <?= form_error('level', '<small class="pl-3 text-danger">', '</small>'); ?>
                                                                                 </div>
+
                                                                                 <div class="form-group">
                                                                                     <label for="username">Username</label>
                                                                                     <input type="text" class="form-control" id="username" name="username">
@@ -124,10 +123,11 @@
                                                                                     <input type="password" class="form-control" id="password" name="password">
                                                                                     <?= form_error('password', '<small class="pl-3 text-danger">', '</small>'); ?>
                                                                                 </div>
+
                                                                                 <div class="form-group">
-                                                                                    <label for="ttd">TTD</label>
+                                                                                    <label for="ttd">Tanda Tangan</label>
                                                                                     <input type="file" class="form-control" id="ttd" name="ttd">
-                                                                                    <?= form_error('gol', '<small class="pl-3 text-danger">', '</small>'); ?>
+                                                                                    <?= form_error('ttd', '<small class="pl-3 text-danger">', '</small>'); ?>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="modal-footer">
@@ -215,6 +215,36 @@
                                                                                         <label for="divisi">Jabatan</label>
                                                                                         <input type="text" class="form-control" id="divisi" name="divisi" value="<?= $m['divisi']; ?>">
                                                                                         <?= form_error('divisi', '<small class="pl-3 text-danger">', '</small>'); ?>
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <label for="role">Role</label>
+                                                                                        <select name="role" id="role" value="<?= $m['role']; ?>" class="form-control">
+                                                                                            <option value="staff">Staff</option>
+                                                                                            <option value="spv">Supervisior</option>
+                                                                                            <option value="mgr">Manager</option>
+                                                                                            <option value="admin">Admin</option>
+                                                                                        </select>
+                                                                                        <?= form_error('role', '<small class="pl-3 text-danger">', '</small>'); ?>
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <label for="level">Level</label>
+                                                                                        <input type="text" class="form-control" id="level" name="level" value="<?= $m['level']; ?>">
+                                                                                        <?= form_error('level', '<small class="pl-3 text-danger">', '</small>'); ?>
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <label for="username">Username</label>
+                                                                                        <input type="text" class="form-control" id="username" name="username" value="<?= $m['username']; ?>">
+                                                                                        <?= form_error('username', '<small class="pl-3 text-danger">', '</small>'); ?>
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <label for="password">Password</label>
+                                                                                        <input type="password" class="form-control" id="password" name="password" value="<?= $m['password']; ?>">
+                                                                                        <?= form_error('password', '<small class="pl-3 text-danger">', '</small>'); ?>
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <label for="ttd">Tanda Tangan</label>
+                                                                                        <input type="file" class="form-control" id="ttd" name="ttd" value="<?= $m['ttd']; ?>">
+                                                                                        <?= form_error('gol', '<small class="pl-3 text-danger">', '</small>'); ?>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="modal-footer">

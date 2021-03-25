@@ -84,7 +84,7 @@ class Surat extends CI_Controller
 		if ($validation->run() == FALSE) //jika form validation gagal tampilkan kembali form tambahnya
 		{
 			$this->surat->tambahSurat($pejabat);
-			redirect('surat/dasu');
+			redirect('surat/darisu');
 		} else {
 			redirect('surat');
 		}
@@ -98,7 +98,7 @@ class Surat extends CI_Controller
 
 		$this->load->library('pdf');
 		$this->pdf->setPaper('A4', 'potrait');
-		$this->pdf->filename = "laporan-petanikode.pdf";
+		$this->pdf->setFileName = "laporan-surat-izin.pdf";
 		$this->pdf->load_view('cetaksurat', $data);
 	}
 }

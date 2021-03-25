@@ -71,6 +71,11 @@
                         <input type="hidden" class="form-control" id="pejabat" name="pejabat" value="<?php echo $pejabat->nama; ?>">
                         <?= form_error('pejabat', '<small class="pl-3 text-danger">', '</small>'); ?>
                       </div>
+                      <div class="form-group">
+                        <input type="hidden" class="form-control" id="ttd" name="ttd" value="<?php echo $pejabat->ttd; ?>">
+                        <?= form_error('ttd', '<small class="pl-3 text-danger">', '</small>'); ?>
+                      </div>
+
                       <div class="row">
                         <div class="col-3"><label for="keperluan">Keperluan </label>
                         </div>

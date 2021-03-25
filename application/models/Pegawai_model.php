@@ -11,17 +11,22 @@ class Pegawai_model extends CI_Model
 
     public function tambahPegawai()
     {
+        $post = $this->input->post();
         $data = array(
             'nip' => $this->input->post('nip', true),
             'nama' => $this->input->post('nama', true),
             'gol' => $this->input->post('gol', true),
             'divisi' => $this->input->post('divisi', true),
-            'username' => $this->input->post('username', true),
-            'password' => $this->input->post('password', true),
             'level' => $this->input->post('level', true),
             'role' => $this->input->post('role', true),
+            'username' => $this->input->post('username', true),
+            'password' => $this->input->post('password', true),
             'ttd' => $this->input->post('ttd', true)
         );
+
+        if ($post['password'] !== '') {
+            $data['password'] = password_hash($post['password'], PASSWORD_DEFAULT);
+        }
         //masukan data yang berhasil di input tiap-tiap field
         $this->db->insert($this->_table, $data);
     }
@@ -43,7 +48,12 @@ class Pegawai_model extends CI_Model
             'nip' => $this->input->post('nip'),
             'nama' => $this->input->post('nama'),
             'gol' => $this->input->post('gol'),
-            'divisi' => $this->input->post('divisi')
+            'divisi' => $this->input->post('divisi'),
+            'username' => $this->input->post('username'),
+            'password' => $this->input->post('password'),
+            'level' => $this->input->post('level'),
+            'role' => $this->input->post('role'),
+            'ttd' => $this->input->post('ttd')
         );
         console_log($data);
         //cari id berdasarkan id yang ada dalam inputan
@@ -58,7 +68,11 @@ class Pegawai_model extends CI_Model
             'nama' => $this->input->post('nama'),
             'gol' => $this->input->post('gol'),
             'divisi' => $this->input->post('divisi'),
-            'password' => $this->input->post('password')
+            'password' => $this->input->post('password'),
+            'username' => $this->input->post('username'),
+            'level' => $this->input->post('level'),
+            'role' => $this->input->post('role'),
+            'ttd' => $this->input->post('ttd')
         );
         console_log($data);
         //cari id berdasarkan id yang ada dalam inputan

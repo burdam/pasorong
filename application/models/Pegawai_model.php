@@ -44,6 +44,7 @@ class Pegawai_model extends CI_Model
 
     public function ubahPegawai($id)
     {
+        $post = $this->input->post();
         $data = array(
             'nip' => $this->input->post('nip'),
             'nama' => $this->input->post('nama'),
@@ -56,6 +57,9 @@ class Pegawai_model extends CI_Model
             'ttd' => $this->input->post('ttd')
         );
         console_log($data);
+        if ($post['password'] !== '') {
+            $data['password'] = password_hash($post['password'], PASSWORD_DEFAULT);
+        }
         //cari id berdasarkan id yang ada dalam inputan
         $this->db->where('id_user', $id);
         $this->db->update($this->_table, $data);
@@ -63,6 +67,7 @@ class Pegawai_model extends CI_Model
 
     public function ubahProfil($id)
     {
+        $post = $this->input->post();
         $data = array(
             'nip' => $this->input->post('nip'),
             'nama' => $this->input->post('nama'),
@@ -75,6 +80,9 @@ class Pegawai_model extends CI_Model
             'ttd' => $this->input->post('ttd')
         );
         console_log($data);
+        if ($post['password'] !== '') {
+            $data['password'] = password_hash($post['password'], PASSWORD_DEFAULT);
+        }
         //cari id berdasarkan id yang ada dalam inputan
         $this->db->where('id_user', $id);
         $this->db->update($this->_table, $data);

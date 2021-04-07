@@ -31,9 +31,9 @@
                                 <div class="p-5">
 
                                     <div class="text-center">
-                                        <h1 class="h5 font-weight-bold mb-1"> SIZKA </h1>
-                                        <h1 class="h6 font-weight-bold mb-1"> Sistem Informasi Izin Keluar Kantor </h1>
-                                        <h1 class="h6 font-weight-bold mb-4"> Pengadilan Agama Sorong </h1>
+                                        <h1 class="h3 font-weight-bold mb-1"> SIZKA </h1>
+                                        <h1 class="h6 font-weight-bold mb-1"> Sistem Informasi Izin Keluar Masuk Kantor </h1>
+                                        <h1 class="h6 font-weight-bold mb-4"> PENGADILAN AGAMA SORONG KELAS II </h1>
                                     </div>
 
                                     <form action="<?= base_url('login/login') ?>" method="post" class="user">

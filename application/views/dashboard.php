@@ -50,9 +50,6 @@
 											<div class="collapse show" id="collapseCardExample3">
 												<div class="card-body">
 													<span>1. Saat ini Anda berada di halaman Dashboard</span>
-													<span>2. Saat ini Anda berada di halaman Dashboard</span>
-													<span>3. Saat ini Anda berada di halaman Dashboard</span>
-													<span>4. Saat ini Anda berada di halaman Dashboard</span>
 												</div>
 											</div>
 										</div>

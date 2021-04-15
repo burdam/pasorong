@@ -39,11 +39,11 @@
                                     <form action="<?= base_url('login/login') ?>" method="post" class="user">
 
                                         <div class="form-group">
-                                            <input type="text" class="form-control form-control-user" id="username" name="username" aria-describedby="emailHelp" placeholder="NIP">
+                                            <input type="text" class="form-control form-control-user" id="username" name="username" aria-describedby="emailHelp" placeholder="NIP / NRP">
                                         </div>
 
                                         <div class="form-group">
-                                            <input type="password" class="form-control form-control-user" id="password" name="password" placeholder="Password">
+                                            <input type="password" class="form-control form-control-user" id="password" name="password" placeholder="Kata Sandi">
                                         </div>
 
                                         <div class="form-group">

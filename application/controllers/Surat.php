@@ -10,7 +10,7 @@ class Surat extends CI_Controller
 		parent::__construct();
 		is_login();
 		$this->load->model('Surat_model');
-		$this->load->model('User_model');
+		$this->load->model('User_Model');
 	}
 
 	public function index()

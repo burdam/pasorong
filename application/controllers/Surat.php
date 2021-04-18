@@ -29,24 +29,24 @@ class Surat extends CI_Controller
 		$this->load->view('surat', $data);
 	}
 
-	public function dasu()
+	public function riwayat()
 	{
 		$data['surat'] = $this->Surat_model->viewSurat();
-		$this->load->view('dasu', $data);
+		$this->load->view('riwayat', $data);
 	}
 
-	public function darisu()
+	public function pribadi()
 	{
 		$id = $this->session->id_user;
 		$data['surat'] = $this->Surat_model->getSurat($id);
-		$this->load->view('darisu', $data);
+		$this->load->view('pribadi', $data);
 	}
 
-	public function darisulvl()
+	public function subunitkerja()
 	{
 		$pejabat = $this->session->userdata('nama');
 		$data['surat'] = $this->Surat_model->getPejabat($pejabat);
-		$this->load->view('darisulvl', $data);
+		$this->load->view('subunitkerja', $data);
 	}
 
 	public function kembali($id)

@@ -44,7 +44,7 @@
 
         <!-- Nav Item - Tables -->
         <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('/surat/dasu'); ?>">
+            <a class="nav-link" href="<?= base_url('/surat/riwayat'); ?>">
                 <i class="fas fa-fw fa-table"></i>
                 <span>Riwayat Surat</span></a>
         </li>
@@ -60,14 +60,14 @@
 
         <!-- Nav Item - Tables -->
         <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('/surat/darisu'); ?>">
+            <a class="nav-link" href="<?= base_url('/surat/pribadi'); ?>">
                 <i class="fas fa-fw fa-address-card"></i>
                 <span>Riwayat Surat Pribadi</span></a>
         </li>
 
         <!-- Nav Item - Tables -->
         <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('/surat/darisulvl'); ?>">
+            <a class="nav-link" href="<?= base_url('/surat/subunitkerja'); ?>">
                 <i class="fas fa-fw fa-list-alt"></i>
                 <span>Riwayat Surat Unit Kerja</span></a>
         </li>
@@ -83,7 +83,7 @@
 
         <!-- Nav Item - Tables -->
         <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('/surat/darisu'); ?>">
+            <a class="nav-link" href="<?= base_url('/surat/pribadi'); ?>">
                 <i class="fas fa-fw fa-address-card"></i>
                 <span>Riwayat Surat Pribadi</span></a>
         </li>

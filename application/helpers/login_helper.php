@@ -13,26 +13,26 @@ function is_login($is_true = false)
     return;
 }
 
-function is_level($level)
+function is_level($role)
 {
     $CI = &get_instance();
-    if ($CI->session->level == $level) {
+    if ($CI->session->role == $role) {
         return true;
     }
 
     return false;
 }
 
-function redirect_if_level_not($level)
+function redirect_if_level_not($role)
 {
     $CI = &get_instance();
     $is_match = false;
-    if (is_array($level)) {
-        if (in_array($CI->session->level, $level)) {
+    if (is_array($role)) {
+        if (in_array($CI->session->level, $role)) {
             $is_match = true;
         }
     } else {
-        $is_match = is_level($level);
+        $is_match = is_level($role);
     }
 
     if (!$is_match) {

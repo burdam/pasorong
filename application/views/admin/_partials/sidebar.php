@@ -32,47 +32,71 @@
     </div>
 
     <!-- Nav Item - Tables -->
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('/pegawai'); ?>">
-            <i class="fas fa-fw fa-user"></i>
-            <span>Data Pegawai</span></a>
-    </li>
+    <?php if (is_level('admin')) : ?>
 
-    <!-- Nav Item - Tables -->
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('/surat'); ?>">
-            <i class="fas fa-fw fa-envelope"></i>
-            <span>Surat Izin</span></a>
-    </li>
+        <li class="nav-item <?= @$_active ?>">
+            <a class="nav-link" href="<?= base_url('/pegawai'); ?>">
+                <i class="fas fa-fw fa-user"></i>
+                <span>Data Pegawai</span></a>
+        </li>
 
-    <!-- Nav Item - Tables -->
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('/surat/dasu'); ?>">
-            <i class="fas fa-fw fa-table"></i>
-            <span>Riwayat Surat</span></a>
-    </li>
+    <?php elseif (is_level('mgr')) : ?>
 
-    <!-- Nav Item - Tables -->
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('/surat/darisu'); ?>">
-            <i class="fas fa-fw fa-address-card"></i>
-            <span>Riwayat Surat Pribadi</span></a>
-    </li>
+        <!-- Nav Item - Tables -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url('/surat/dasu'); ?>">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Riwayat Surat</span></a>
+        </li>
 
-    <!-- Nav Item - Tables -->
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('/surat/darisulvl'); ?>">
-            <i class="fas fa-fw fa-list-alt"></i>
-            <span>Riwayat Surat Unit Kerja</span></a>
-    </li>
+    <?php elseif (is_level('spv')) : ?>
 
-    <!-- Divider -->
-    <hr class="sidebar-divider d-none d-md-block">
+        <!-- Nav Item - Tables -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url('/surat'); ?>">
+                <i class="fas fa-fw fa-envelope"></i>
+                <span>Surat Izin</span></a>
+        </li>
 
-    <!-- Sidebar Toggler (Sidebar) -->
-    <div class="text-center d-none d-md-inline">
-        <button class="rounded-circle border-0" id="sidebarToggle"></button>
-    </div>
+        <!-- Nav Item - Tables -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url('/surat/darisu'); ?>">
+                <i class="fas fa-fw fa-address-card"></i>
+                <span>Riwayat Surat Pribadi</span></a>
+        </li>
+
+        <!-- Nav Item - Tables -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url('/surat/darisulvl'); ?>">
+                <i class="fas fa-fw fa-list-alt"></i>
+                <span>Riwayat Surat Unit Kerja</span></a>
+        </li>
+
+    <?php else : ?>
+
+        <!-- Nav Item - Tables -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url('/surat'); ?>">
+                <i class="fas fa-fw fa-envelope"></i>
+                <span>Surat Izin</span></a>
+        </li>
+
+        <!-- Nav Item - Tables -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url('/surat/darisu'); ?>">
+                <i class="fas fa-fw fa-address-card"></i>
+                <span>Riwayat Surat Pribadi</span></a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block">
+
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+            <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+
+    <?php endif; ?>
 
 </ul>
 <!-- End of Sidebar -->

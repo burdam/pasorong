@@ -29,16 +29,13 @@
 
                             <div class="col-md-12">
 
-                                <div class="card">
+                                <form class="form-group" action="<?= base_url('user/edit_profil') ?>" method="post">
 
-                                    <div class="card-header py-3">
-                                        <h6 class="m-0 font-weight-bold text-success">Edit Profil</h6>
-                                    </div>
-
-                                    <form class="form-group" action="<?= base_url('user/edit_profil') ?>" method="post">
-
+                                    <div class="card shadow mb-4">
+                                        <div class="card-header py-3">
+                                            <h6 class="m-0 font-weight-bold text-success">Edit Profil</h6>
+                                        </div>
                                         <div class="card-body">
-
                                             <div class="form-group row">
                                                 <div class="col-3"><label for="nip">NIP </label>
                                                 </div>
@@ -64,7 +61,7 @@
                                             </div>
 
                                             <div class="form-group row">
-                                                <div class="col-3"><label for="divisi">Unit Kerja </label>
+                                                <div class="col-3"><label for="divisi">Jabatan </label>
                                                 </div>
                                                 <div class="col-9"> : <?= $pegawai->divisi ?>
                                                     <input type="hidden" name="divisi" id="divisi" value="<?= $pegawai->divisi ?>" class="form-control" placeholder="Unit Kerja" required="reuqired" />
@@ -78,23 +75,23 @@
                                             </div>
 
                                             <div class="form-group">
-                                                <div class="col-2">
+                                                <div class="col-12">
                                                     <label for="password">Password </label>
                                                 </div>
-                                                <div class="col-4">
+                                                <div class="col-12">
                                                     <input type="password" name="password" id="password" value="<?= $pegawai->password ?>" class="form-control" placeholder="Password" required="reuqired" />
+                                                </div>
+                                                <div class="col-12 text-danger">*jika tidak ingin mengganti password biarkan seperti ini
                                                 </div>
                                             </div>
 
                                             <div class="form-group">
                                                 <button type="submit" class="btn btn-primary btn-circle btn-sm float-right"><i class="fa fa-save"></i></button>
                                             </div>
-
                                         </div>
+                                    </div>
 
-                                    </form>
-
-                                </div>
+                                </form>
 
                             </div>
 

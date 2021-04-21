@@ -27,7 +27,7 @@
             <td>:</td>
             <td>14 Mei 2008</td>
         </tr>
-    </table><br><br><br><br>
+    </table><br><br><br><br><br>
     <hr />
     <p>
         <center><b>SURAT IZIN KELUAR KANTOR</b></center>

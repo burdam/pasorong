@@ -33,17 +33,17 @@
                                     <div class="text-center">
                                         <h1 class="h3 font-weight-bold mb-1"> SIZKA </h1>
                                         <h1 class="h6 font-weight-bold mb-1"> Sistem Informasi Izin Keluar Masuk Kantor </h1>
-                                        <h1 class="h6 font-weight-bold mb-4"> PENGADILAN AGAMA SORONG KELAS II </h1>
+                                        <h1 class="h6 font-weight-bold mb-4"> PENGADILAN AGAMA SORONG </h1>
                                     </div>
 
                                     <form action="<?= base_url('login/login') ?>" method="post" class="user">
 
                                         <div class="form-group">
-                                            <input type="text" class="form-control form-control-user" id="username" name="username" aria-describedby="emailHelp" placeholder="NIP">
+                                            <input type="text" class="form-control form-control-user" id="username" name="username" aria-describedby="emailHelp" placeholder="NIP / NRP">
                                         </div>
 
                                         <div class="form-group">
-                                            <input type="password" class="form-control form-control-user" id="password" name="password" placeholder="Password">
+                                            <input type="password" class="form-control form-control-user" id="password" name="password" placeholder="Kata Sandi">
                                         </div>
 
                                         <div class="form-group">

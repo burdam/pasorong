@@ -23,7 +23,7 @@
 
                     <!-- Page Heading -->
                     <div class="container">
-                        <h3 class="font-weight-bold text-success">Sistem Informasi Izin Keluar Kantor</h3>
+                        <h6 class="font-weight-bold text-success">Sistem Informasi Izin Keluar Kantor</h6>
 
                         <div class="row mt-8">
 
@@ -39,7 +39,7 @@
                                             <div class="form-group row">
                                                 <div class="col-3"><label for="nip">NIP </label>
                                                 </div>
-                                                <div class="col-9"> : <?= $pegawai->nip ?>
+                                                <div class="col-9"> : <strong> <?= $pegawai->nip ?></strong>
                                                     <input type="hidden" name="nip" id="nip" value="<?= $pegawai->nip ?>" class="form-control" placeholder="NIP" required="reuqired" />
                                                 </div>
                                             </div>
@@ -47,24 +47,24 @@
                                             <div class="form-group row">
                                                 <div class="col-3"><label for="nama">Nama </label>
                                                 </div>
-                                                <div class="col-9"> : <?= $pegawai->nama ?>
+                                                <div class="col-9"> : <strong> <?= $pegawai->nama ?></strong>
                                                     <input type="hidden" name="nama" id="nama" value="<?= $pegawai->nama ?>" class="form-control" placeholder="Nama" required="reuqired" />
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group row">
-                                                <div class="col-3"><label for="gol">Golongan </label>
-                                                </div>
-                                                <div class="col-9"> : <?= $pegawai->gol ?>
-                                                    <input type="hidden" name="gol" id="go;" value="<?= $pegawai->gol ?>" class="form-control" placeholder="Golongan" required="reuqired" />
                                                 </div>
                                             </div>
 
                                             <div class="form-group row">
                                                 <div class="col-3"><label for="divisi">Jabatan </label>
                                                 </div>
-                                                <div class="col-9"> : <?= $pegawai->divisi ?>
+                                                <div class="col-9"> : <strong> <?= $pegawai->divisi ?></strong>
                                                     <input type="hidden" name="divisi" id="divisi" value="<?= $pegawai->divisi ?>" class="form-control" placeholder="Unit Kerja" required="reuqired" />
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <div class="col-3"><label for="gol">Golongan </label>
+                                                </div>
+                                                <div class="col-9"> : <strong> <?= $pegawai->gol ?></strong>
+                                                    <input type="hidden" name="gol" id="go;" value="<?= $pegawai->gol ?>" class="form-control" placeholder="Golongan" required="reuqired" />
                                                 </div>
                                             </div>
 
@@ -76,12 +76,12 @@
 
                                             <div class="form-group">
                                                 <div class="col-12">
-                                                    <label for="password">Password </label>
+                                                    <label for="password">Kata Sandi </label>
                                                 </div>
                                                 <div class="col-12">
                                                     <input type="password" name="password" id="password" value="<?= $pegawai->password ?>" class="form-control" placeholder="Password" required="reuqired" />
                                                 </div>
-                                                <div class="col-12 text-danger">*jika tidak ingin mengganti password biarkan seperti ini
+                                                <div class="col-12 text-danger">*jika tidak ingin mengganti kata sandi biarkan seperti ini
                                                 </div>
                                             </div>
 

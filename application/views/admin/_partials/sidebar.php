@@ -49,6 +49,13 @@
                 <span>Riwayat Surat</span></a>
         </li>
 
+        <!-- Nav Item - Tables -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url('/surat/subunitkerja'); ?>">
+                <i class="fas fa-fw fa-list-alt"></i>
+                <span>Riwayat Surat Unit Kerja</span></a>
+        </li>
+
     <?php elseif (is_level('spv')) : ?>
 
         <!-- Nav Item - Tables -->

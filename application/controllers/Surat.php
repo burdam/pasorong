@@ -54,7 +54,7 @@ class Surat extends CI_Controller
 		$this->load->model('Surat_model', 'surat');
 		$data['surat'] = $this->Surat_model->getById($id);
 		$this->surat->ubahSurat($id, $data);
-		redirect('surat/darisu');
+		redirect('surat/pribadi');
 	}
 
 	public function store()
@@ -84,7 +84,7 @@ class Surat extends CI_Controller
 		if ($validation->run() == FALSE) //jika form validation gagal tampilkan kembali form tambahnya
 		{
 			$this->surat->tambahSurat($pejabat);
-			redirect('surat/darisu');
+			redirect('surat/pribadi');
 		} else {
 			redirect('surat');
 		}

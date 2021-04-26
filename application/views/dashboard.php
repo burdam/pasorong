@@ -43,13 +43,13 @@
 										<!-- Collapsable Card Example -->
 										<div class="card shadow mb-4">
 											<!-- Card Header - Accordion -->
-											<a href="#collapseCardExample3" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+											<a href="#collapseCardExample1" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
 												<h6 class="m-0 font-weight-bold text-success">Panduan</h6>
 											</a>
 											<!-- Card Content - Collapse -->
-											<div class="collapse show" id="collapseCardExample3">
+											<div class="collapse show" id="collapseCardExample1">
 												<div class="card-body">
-													<span>1. Saat ini Anda berada di halaman Dashboard</span>
+													<span><a href="#">Unduh Panduan Penggunaan Aplikasi</a></span>
 												</div>
 											</div>
 										</div>
@@ -63,7 +63,7 @@
 											<!-- Card Content - Collapse -->
 											<div class="collapse show" id="collapseCardExample2">
 												<div class="card-body">
-
+													<span>Area untuk menuliskan Pengumuman</span>
 												</div>
 											</div>
 										</div>
@@ -71,13 +71,13 @@
 										<!-- Collapsable Card Example -->
 										<div class="card shadow mb-4">
 											<!-- Card Header - Accordion -->
-											<a href="#collapseCardExample1" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+											<a href="#collapseCardExample3" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
 												<h6 class="m-0 font-weight-bold text-success">Informasi</h6>
 											</a>
 											<!-- Card Content - Collapse -->
-											<div class="collapse show" id="collapseCardExample1">
+											<div class="collapse show" id="collapseCardExample3">
 												<div class="card-body">
-													<span>Web Aplikasi SIZKA (Sistem Izin Keluar Kantor) dibuat dan dikembangkan oleh Pengadilan Agama Sorong dengan tujuan untuk memudahkan proses pembuatan surat izin keluar kantor.</span>
+													<span>Web Aplikasi SIZKA (Sistem Informasi Izin Keluar Kantor) dibuat dan dikembangkan oleh Tim IT Pengadilan Agama Sorong dengan tujuan untuk memudahkan proses pembuatan surat izin keluar kantor.</span>
 												</div>
 											</div>
 										</div>

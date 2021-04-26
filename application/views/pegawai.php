@@ -76,28 +76,28 @@
                                                                             </div>
                                                                             <div class="modal-body">
                                                                                 <div class="form-group">
-                                                                                    <label for="nip">NIP</label>
+                                                                                    <label for="nip">NIP</label><small class="text-danger"> *wajib diisi</small>
                                                                                     <input type="nip" class="form-control" id="nip" name="nip">
                                                                                     <?= form_error('nip', '<small class="pl-3 text-danger">', '</small>'); ?>
                                                                                 </div>
                                                                                 <div class="form-group">
-                                                                                    <label for="nama">Nama</label>
+                                                                                    <label for="nama">Nama</label><small class="text-danger"> *wajib diisi</small>
                                                                                     <input type="text" class="form-control" id="nama" name="nama">
                                                                                     <?= form_error('nisn', '<small class="pl-3 text-danger">', '</small>'); ?>
                                                                                 </div>
                                                                                 <div class="form-group">
-                                                                                    <label for="divisi">Jabatan</label>
+                                                                                    <label for="divisi">Jabatan</label><small class="text-danger"> *wajib diisi</small>
                                                                                     <input type="text" class="form-control" id="divisi" name="divisi">
                                                                                     <?= form_error('divisi', '<small class="pl-3 text-danger">', '</small>'); ?>
                                                                                 </div>
                                                                                 <div class="form-group">
-                                                                                    <label for="gol">Golongan</label>
+                                                                                    <label for="gol">Golongan</label><small class="text-danger"> *wajib diisi</small>
                                                                                     <input type="text" class="form-control" id="gol" name="gol">
                                                                                     <?= form_error('gol', '<small class="pl-3 text-danger">', '</small>'); ?>
                                                                                 </div>
 
                                                                                 <div class="form-group">
-                                                                                    <label for="role">Role</label>
+                                                                                    <label for="role">Role</label><small class="text-danger"> *wajib diisi</small>
                                                                                     <select class="form-control" id="role" name="role">
                                                                                         <option value="staff">Staff</option>
                                                                                         <option value="spv">Supervisior</option>
@@ -108,24 +108,24 @@
                                                                                 </div>
 
                                                                                 <div class="form-group">
-                                                                                    <label for="level">Level</label>
+                                                                                    <label for="level">Level</label><small class="text-danger"> *wajib diisi</small>
                                                                                     <input type="text" class="form-control" id="level" name="level">
                                                                                     <?= form_error('level', '<small class="pl-3 text-danger">', '</small>'); ?>
                                                                                 </div>
 
                                                                                 <div class="form-group">
-                                                                                    <label for="username">Username</label>
+                                                                                    <label for="username">Username</label><small class="text-danger"> *wajib diisi</small>
                                                                                     <input type="text" class="form-control" id="username" name="username">
                                                                                     <?= form_error('username', '<small class="pl-3 text-danger">', '</small>'); ?>
                                                                                 </div>
                                                                                 <div class="form-group">
-                                                                                    <label for="password">Password</label>
+                                                                                    <label for="password">Password</label><small class="text-danger"> *wajib diisi</small>
                                                                                     <input type="password" class="form-control" id="password" name="password">
                                                                                     <?= form_error('password', '<small class="pl-3 text-danger">', '</small>'); ?>
                                                                                 </div>
 
                                                                                 <div class="form-group">
-                                                                                    <label for="ttd">Tanda Tangan</label>
+                                                                                    <label for="ttd">Tanda Tangan</label><small class="text-warning"> *opsional</small>
                                                                                     <input type="file" class="form-control" id="ttd" name="ttd">
                                                                                     <?= form_error('ttd', '<small class="pl-3 text-danger">', '</small>'); ?>
                                                                                 </div>
@@ -197,27 +197,27 @@
                                                                                 </div>
                                                                                 <div class="modal-body">
                                                                                     <div class="form-group">
-                                                                                        <label for="nip">NIP</label>
+                                                                                        <label for="nip">NIP</label><small class="text-danger"> *wajib diisi</small>
                                                                                         <input type="text" class="form-control" id="nip" name="nip" value="<?= $m['nip']; ?>">
                                                                                         <?= form_error('nip', '<small class="pl-3 text-danger">', '</small>'); ?>
                                                                                     </div>
                                                                                     <div class="form-group">
-                                                                                        <label for="nama">Nama</label>
+                                                                                        <label for="nama">Nama</label><small class="text-danger"> *wajib diisi</small>
                                                                                         <input type="text" class="form-control" id="nama" name="nama" value="<?= $m['nama']; ?>">
                                                                                         <?= form_error('nama', '<small class="pl-3 text-danger">', '</small>'); ?>
                                                                                     </div>
                                                                                     <div class="form-group">
-                                                                                        <label for="gol">Golongan</label>
+                                                                                        <label for="gol">Golongan</label><small class="text-danger"> *wajib diisi</small>
                                                                                         <input type="text" class="form-control" id="gol" name="gol" value="<?= $m['gol']; ?>">
                                                                                         <?= form_error('gol', '<small class="pl-3 text-danger">', '</small>'); ?>
                                                                                     </div>
                                                                                     <div class="form-group">
-                                                                                        <label for="divisi">Jabatan</label>
+                                                                                        <label for="divisi">Jabatan</label><small class="text-danger"> *wajib diisi</small>
                                                                                         <input type="text" class="form-control" id="divisi" name="divisi" value="<?= $m['divisi']; ?>">
                                                                                         <?= form_error('divisi', '<small class="pl-3 text-danger">', '</small>'); ?>
                                                                                     </div>
                                                                                     <div class="form-group">
-                                                                                        <label for="role">Role</label>
+                                                                                        <label for="role">Role</label><small class="text-danger"> *wajib diisi</small>
                                                                                         <select name="role" id="role" value="<?= $m['role']; ?>" class="form-control">
                                                                                             <option value="staff">Staff</option>
                                                                                             <option value="spv">Supervisior</option>
@@ -227,22 +227,22 @@
                                                                                         <?= form_error('role', '<small class="pl-3 text-danger">', '</small>'); ?>
                                                                                     </div>
                                                                                     <div class="form-group">
-                                                                                        <label for="level">Level</label>
+                                                                                        <label for="level">Level</label><small class="text-danger"> *wajib diisi</small>
                                                                                         <input type="text" class="form-control" id="level" name="level" value="<?= $m['level']; ?>">
                                                                                         <?= form_error('level', '<small class="pl-3 text-danger">', '</small>'); ?>
                                                                                     </div>
                                                                                     <div class="form-group">
-                                                                                        <label for="username">Username</label>
+                                                                                        <label for="username">Username</label><small class="text-danger"> *wajib diisi</small>
                                                                                         <input type="text" class="form-control" id="username" name="username" value="<?= $m['username']; ?>">
                                                                                         <?= form_error('username', '<small class="pl-3 text-danger">', '</small>'); ?>
                                                                                     </div>
                                                                                     <div class="form-group">
-                                                                                        <label for="password">Password</label>
+                                                                                        <label for="password">Password</label><small class="text-danger"> *wajib diisi</small>
                                                                                         <input type="password" class="form-control" id="password" name="password" value="<?= $m['password']; ?>">
                                                                                         <?= form_error('password', '<small class="pl-3 text-danger">', '</small>'); ?>
                                                                                     </div>
                                                                                     <div class="form-group">
-                                                                                        <label for="ttd">Tanda Tangan</label>
+                                                                                        <label for="ttd">Tanda Tangan</label><small class="text-warning"> *opsional</small>
                                                                                         <input type="file" class="form-control" id="ttd" name="ttd" value="<?= $m['ttd']; ?>">
                                                                                         <?= form_error('gol', '<small class="pl-3 text-danger">', '</small>'); ?>
                                                                                     </div>
@@ -269,46 +269,69 @@
                                                                             <div class="modal-body">
                                                                                 <div class="modal-body">
                                                                                     <div class="row">
-                                                                                        <div class="col-4">
-                                                                                            <label for="nip">NIP</label>
+                                                                                        <div class="col-2">
+                                                                                            <label for="nip"> NIP </label>
                                                                                         </div>
-                                                                                        <div class="col-8">
-                                                                                            <label for="nip">: <?= $m['nip']; ?></label>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div class="row">
-                                                                                        <div class="col-4">
-                                                                                            <label for="nip">Nama</label>
-                                                                                        </div>
-                                                                                        <div class="col-8">
-                                                                                            <label for="nip">: <?= $m['nama']; ?></label>
+                                                                                        <div class="col-10">
+                                                                                            <label for="nip"> : </label>
                                                                                         </div>
                                                                                     </div>
                                                                                     <div class="row">
-                                                                                        <div class="col-4">
+                                                                                        <div class="col-12">
+                                                                                            <strong for="nip"><?= $m['nip']; ?></strong>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <br>
+                                                                                    <div class="row">
+                                                                                        <div class="col-2">
+                                                                                            <label for="nip"> Nama </label>
+                                                                                        </div>
+                                                                                        <div class="col-10">
+                                                                                            <label for="nip"> : </label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="row">
+                                                                                        <div class="col-12">
+                                                                                            <strong for="nip"><?= $m['nama']; ?></strong>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <br>
+                                                                                    <div class="row">
+                                                                                        <div class="col-2">
                                                                                             <label for="nip">Jabatan</label>
                                                                                         </div>
-                                                                                        <div class="col-8">
-                                                                                            <label for="nip">: <?= $m['divisi']; ?></label>
+                                                                                        <div class="col-10">
+                                                                                            <label for="nip">: </label>
                                                                                         </div>
                                                                                     </div>
                                                                                     <div class="row">
-                                                                                        <div class="col-4">
-                                                                                            <label for="nip">Golongan</label>
-                                                                                        </div>
-                                                                                        <div class="col-8">
-                                                                                            <label for="nip">: <?= $m['gol']; ?></label>
+                                                                                        <div class="col-12">
+                                                                                            <strong for="nip"><?= $m['divisi']; ?></strong>
                                                                                         </div>
                                                                                     </div>
+                                                                                    <br>
+                                                                                    <div class="row">
+                                                                                        <div class="col-2">
+                                                                                            <label for="nip">Golongan</label>
+                                                                                        </div>
+                                                                                        <div class="col-10">
+                                                                                            <label for="nip">: </label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="row">
+                                                                                        <div class="col-12">
+                                                                                            <strong for="nip"><?= $m['gol']; ?></strong>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <br>
                                                                                 </div>
-                                                                            </div>
-                                                                            <div class="modal-footer">
-                                                                                <a href="<?= base_url('pegawai/hapus/'); ?><?= $m['id_user']; ?>" class="btn btn-success btn-circle btn-sm"><i class="fas fa-check"></i></a>
+                                                                                <div class="modal-footer">
+                                                                                    <a href="<?= base_url('pegawai/hapus/'); ?><?= $m['id_user']; ?>" class="btn btn-success btn-circle btn-sm"><i class="fas fa-check"></i></a>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                </div>
-                                                                <!-- End Modal Delete Product-->
+                                                                    <!-- End Modal Delete Product-->
 
                                                             </td>
                                                         </tr>

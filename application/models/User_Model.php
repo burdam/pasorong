@@ -11,14 +11,14 @@ class User_Model extends CI_Model
             return $data->row();
         }
         return $data;
-    }
+    } //mencari data pegawai
 
     public function update_data($id, $data)
     {
         $this->db->where('id_user', $id);
         $result = $this->db->update('pegawai', $data);
         return $result;
-    }
+    } //update data pegawai
 
     public function get_pejabat($level, $role)
     {
@@ -26,5 +26,5 @@ class User_Model extends CI_Model
         $this->db->where('role', $role);
         $result = $this->db->get('pegawai');
         return $result->row();
-    }
+    } //mencari user dengan level dan role tertentu
 }

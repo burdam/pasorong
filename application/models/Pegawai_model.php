@@ -7,7 +7,7 @@ class Pegawai_model extends CI_Model
     public function viewPegawai()
     {
         return $this->db->get($this->_table)->result_array();
-    }
+    } //untuk menampilkan seluruh data pegawai
 
     public function tambahPegawai()
     {
@@ -27,20 +27,19 @@ class Pegawai_model extends CI_Model
         if ($post['password'] !== '') {
             $data['password'] = password_hash($post['password'], PASSWORD_DEFAULT);
         }
-        //masukan data yang berhasil di input tiap-tiap field
         $this->db->insert($this->_table, $data);
-    }
+    } //menambahkan pegawai ke database
 
     public function hapus($id_user)
     {
         $this->db->where('id_user', $id_user);
         $this->db->delete($this->_table);
-    }
+    } //menghapus pegawai dari database
 
     public function getById($id)
     {
         return $this->db->get_where($this->_table, ['id_user' => $id])->row_array();
-    }
+    } //mengambil data pegawai berdasarkan id
 
     public function ubahPegawai($id)
     {
@@ -60,7 +59,7 @@ class Pegawai_model extends CI_Model
         if ($post['password'] !== '') {
             $data['password'] = password_hash($post['password'], PASSWORD_DEFAULT);
         }
-        //cari id berdasarkan id yang ada dalam inputan
+        //mengubah data pegawai
         $this->db->where('id_user', $id);
         $this->db->update($this->_table, $data);
     }
@@ -83,7 +82,7 @@ class Pegawai_model extends CI_Model
         if ($post['password'] !== '') {
             $data['password'] = password_hash($post['password'], PASSWORD_DEFAULT);
         }
-        //cari id berdasarkan id yang ada dalam inputan
+        //mengubah data pegawai secara personal
         $this->db->where('id_user', $id);
         $this->db->update($this->_table, $data);
     }
@@ -96,5 +95,5 @@ class Pegawai_model extends CI_Model
             return $data->row();
         }
         return $data;
-    }
+    } //mencari data berdasarkan inputan tertentu
 }

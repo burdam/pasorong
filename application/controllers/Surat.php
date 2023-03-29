@@ -72,7 +72,8 @@ class Surat extends CI_Controller
 		}
 
 		$this->load->model('Surat_model', 'surat');
-		$validation = $this->form_validation; //untuk menghemat penulisan kode
+		$validation = $this->form_validation;
+		//untuk menghemat penulisan kode
 		$validation->set_rules('id_user', 'id_user', 'required');
 		$validation->set_rules('nip', 'nip', 'required');
 		$validation->set_rules('nama', 'nama', 'required');
@@ -81,7 +82,8 @@ class Surat extends CI_Controller
 		$validation->set_rules('kegiatan', 'kegiatan', 'required');
 		$validation->set_rules('pejabat', 'pejabat', 'required');
 
-		if ($validation->run() == FALSE) //jika form validation gagal tampilkan kembali form tambahnya
+		if ($validation->run() == FALSE)
+		//jika form validation gagal tampilkan kembali form tambahnya
 		{
 			$this->surat->tambahSurat($pejabat);
 			redirect('surat/pribadi');
@@ -94,8 +96,6 @@ class Surat extends CI_Controller
 	{
 		$this->load->model('Surat_model', 'surat');
 		$data['surat'] = $this->Surat_model->previewSurat('id_surat', $id, true);
-		//$this->load->view('cetaksurat', $data);
-
 		$this->load->library('pdf');
 		$this->pdf->setPaper('A4', 'potrait');
 		$this->pdf->setFileName = "laporan-surat-izin.pdf";

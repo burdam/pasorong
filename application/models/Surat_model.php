@@ -21,7 +21,7 @@ class Surat_model extends CI_Model
             'kegiatan' => $this->input->post('kegiatan'),
             'pejabat' => $this->input->post('pejabat')
         );
-        //masukan data yang berhasil di input tiap-tiap field
+
         $this->db->insert($this->_table, $data);
     }
 
@@ -38,7 +38,7 @@ class Surat_model extends CI_Model
             'pejabat' => $this->input->post('pejabat'),
             'ttd' => $this->input->post('ttd'),
         );
-        //masukan data yang berhasil di input tiap-tiap field
+
         $this->db->insert($this->_table, $data);
     }
 

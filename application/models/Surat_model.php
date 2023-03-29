@@ -78,5 +78,5 @@ class Surat_model extends CI_Model
             return $data->row();
         }
         return $data;
-    } //menampilkan privew surat izin yang telah selesai diproses
+    } //menampilkan preview surat izin yang telah selesai diproses
 }
